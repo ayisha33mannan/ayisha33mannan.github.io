@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTHSCHILD’S GIRAFFE</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Bubblegum Sans', cursive; 
+        }
+        p, span, a {
+            font-family: 'Open Sans', sans-serif; 
+        }
+        html{
+            overflow-x: hidden; 
+        }
+        body{
+            min-height: 100vh;
+            background-color: #003329;
+        }
+        header {
+            height: 60vh;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: top;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1; 
+        }
+        /* nav bar start*/
+        nav {
+            z-index: 9000;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            padding: 20px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul {
+            margin: 0; 
+            padding: 0; 
+            list-style: none;
+        }
+        ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            transition:  0.8s;
+        }
+        nav a:hover {
+            color: #d68f50;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            -webkit-text-stroke: 0px;
+        }
+        nav a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 2px solid #BB661B;
+            border-radius: 20px;
+            transform: scale(0) translateY(50px);
+            transition: 0.5s;
+        }
+        nav a:hover span {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        nav .logo {
+            width: 80px;
+            margin-left: -71px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 5%;
+                left: -240px;
+            }
+            ul li {
+                display: block; 
+                margin-left: 0; 
+                margin-bottom: 10px; 
+            }
+            nav .logo {
+                margin-left: 250px;
+            }
+        }
+        .title1{
+            margin: 20px;
+            h1{
+                font-size: 70px;
+                letter-spacing: 1.5px;
+                color: #BB661B;
+            }
+            h2{
+                font-size: 25px;
+                color: #d68f50;            }
+            hr{
+                margin: 7px 0px;
+                border: none; 
+                height: 2px; 
+                background-color: #F9E8D9; 
+                padding: 0;
+            }
+        }
+        .table-info{
+            color: #F9E8D9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-top: 20px;
+            h3{
+                margin-left: -3px;
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .tab-left{
+            p{
+                color: #F9E8D9;           
+            }
+        }
+        .tab-right{
+            h3{
+                margin-left: -3px;
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .tab-left,
+        .tab-right{
+            flex-basis: 45%;
+            margin-bottom: 20px;
+        }
+        /* parallax image --start--- */
+        .picture{
+            position: relative;
+            background: url(images/giraffe.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center -3% ;
+            background-attachment: fixed;
+        }
+        .inside{
+            padding: 15% 0;
+        }
+        /* about section ---start--- */
+        .about{
+            margin: 20px;
+            #head, #text{
+                display: inline;
+            }
+        }
+        .abt-info{
+            color: #F9E8D9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-top: 20px;
+            h3{
+                margin-left: -3px;
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .abt-left{
+            flex-basis: 60%;
+            margin-bottom: 20px;
+            h1{
+                font-size: 60px;
+                color: #BB661B; 
+            }
+            h2{
+                color: #d68f50;
+            }
+            #Threats{
+                padding-top: 5px;
+            }
+            p{
+                color: #F9E8D9;
+                padding: 5px;        
+            }
+        }
+        .abt-right{
+            flex-basis: 40%;
+            margin-bottom: 20px;
+            margin-top: 23px;
+            h2{
+                padding: 3px 0px;
+                border-top: 2px solid  #BB661B; 
+                padding-top: 5px;
+                color: #d68f50;
+            }
+            #border{
+                border-bottom: 2px solid #BB661B; 
+                padding-bottom: 5px;
+            }
+            /* h3 wasn't working */
+            h4{
+                font-size: 17px;
+                padding: 2px 0px 2px 10px;
+                color: #F7B787;
+                span{
+                    font-size: 15px;
+                    font-weight: 2;
+                    color: #F9E8D9;
+                }
+            }
+            p{
+                padding: 2px 0px 2px 10px;
+                color: #F9E8D9;
+            }
+
+        }
+        /* about section ---end--- */
+        /* animals ----------starting------ */
+        .animal_st {
+            width: 100%;
+            height: 430px;
+            position: relative;
+            background-color: #003329;
+            background-repeat: no-repeat;
+            background-size: cover;
+            h2 {
+            font-size: 45px;
+            padding: 20px 0px;
+            position: absolute;
+            top: 50%;
+            left: 36%;
+            top: 0;
+            color: #BB661B;
+            }
+            #Discover{
+                position: absolute;
+                top: 18%;
+                left: 35%;
+                font-size: 23px;
+                color: #d68f50;
+            }
+        }
+        .circles {
+            display: flex;
+            flex-wrap: wrap ;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 100px;
+            height: 100%;
+            width: 100%
+        }
+        
+        .circle-container {
+            text-align: center;
+            position: relative;
+        }
+        .circle {
+            width: 230px;
+            height: 230px;
+            border: 2px solid #BB661B;
+            background-color: transparent;
+            background-size: cover;
+            transition: background-color 0.5s;
+            position: relative;
+        }
+        .bird.circle {
+            background-image: url('images/leapord.jpg');
+            background-position: center -10px;
+            background-repeat: no-repeat;
+        }
+        
+        .mamal.circle {
+            background-image: url('images/show-rr.jpg');
+            background-position: right ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .reptile.circle {
+            background-image: url('images/show-gg.jpg');
+            background-position: center 0px;
+            background-size: 250px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .circle-container:hover .circle {
+            border: none;
+            transform: scale(1.03);
+            filter: none;
+            box-shadow: 15px 15px 30px  #000;
+        }
+        .circle-container::before{
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            top: -4px;
+            left: -4px;
+            border: 4px dashed #F7B787;
+            opacity: 0;
+        }
+
+        .circle-container:hover:before{
+            animation: spin 10s linear infinite;
+            opacity: 1;
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .labe {
+            position: absolute;
+            bottom: -55px;
+            left: 50%;
+            text-transform: uppercase;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-weight: 600;
+            transition:  0.8s;
+            color: #F9E8D9;
+            text-decoration: none;
+        }
+        /* animals ----------ending------ */
+        /* gallery ----------start--------- */
+        .show{
+            margin-top: 25px;
+            border-bottom: 2px solid #F9E8D9; 
+            padding-bottom: 5px;
+            h2{
+                font-size: 38px;
+                text-align: center;
+                color: #BB661B; 
+
+            }
+        }
+        .container{
+            width: 100%;
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 8%;
+            border-bottom: 2px solid #F9E8D9; 
+            padding-bottom: 50px;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-gap: 30px;
+            img{
+                width: 100%;
+            }
+        }
+        /* gallery ----------end--------- */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/index.html" class="active">home <span></span></a></li> 
+            <li><a href="/mamal pg/index.html">mammals <span></span></a></li>
+            <li><a href="/birds/bird.html">birds <span></span></a></li>
+            <li><a href="/reptile/reptile.html">reptiles <span></span></a></li>
+            <li><a href="/login pg/login.html">login <span></span></a></li>
+            <li><a href="/contact us/contact.html">contact <span></span></a></li>
+        </ul>
+        </nav>
+        <img src="images/gg.jpg"  class="bg">
+        <div class="overlay"></div>
+    </header>
+    <main>
+        <section class="title1">
+            <h1>Giraffe</h1>
+            <h2>ROTHSCHILD’S GIRAFFE</h2>
+            <hr>
+            <div class="table-info">
+                <div class="tab-left">
+                    <h3>Class <span>:Mammalia (Mammals)</span></h3>
+                    <h3>Scientific Name <span>: Giraffa camelopardalis rothschildi</span></h3>
+                    <h3>FAMILY <span>: Giraffidae</span></h3>
+                </div>
+                <div class="tab-right">
+                    <h3>SPECIES <span>: camelopardalis</span></h3>
+                    <h3>GENUS <span>: Giraffa</span></h3>
+                    <h3>ORDER <span>: Artiodactyla</span></h3>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <div class="picture">
+                <div class="inside"></div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="abt-info">
+                <div class="abt-left">
+                    <h1>About</h1>
+                    <h2 id="head">Hello up there!</h2>
+                    <p id="text">I am Zaafarana a Rothschild’s giraffe, have you visited me at Al Ain Zoo? If you haven’t, then it’s time to plan a trip! Did you know that we were named after a very famous person, Walter Rothschild, a London zoologist, a member of the well-known banking family, and the founder of Tring Museum? He also has insects, fish, spiders and various types of fauna named after his surname; isn’t that very neat? <br> <br> I am sometimes called a Baringo giraffe, named after Lake Baringo in Kenya where my kind lives, and I am also known as the Ugandan giraffe. The International Union for Conservation of Nature officially recognizes one giraffe species and nine sub-species. According to them, we Rothschild giraffes are classified as ‘near threatened’ on the red list category of endangered animals.</p>
+                    <h2 id="Threats">Threats</h2>
+                    <p>Rothschild’s giraffes used to be on the IUCN’s Red List under its “endangered” category, but in 2018 we were moved to the safer “near threatened” category, thanks to efforts to protect the species by establishments like Al Ain Zoo, Uganda Conservation Foundation, and other giraffe conservation centers. There are only a few locations left where you can see giraffes like me in the wild, including Lake Nakuru National Park in Kenya and Murchison Falls National Park in northern Uganda. Threats to our population include predators such as leopards, lions, crocodiles, and hyenas, and the four IUCN recognized threats: habitat loss, civil unrest, poaching, and ecological changes.</p>
+                    <h2>Conservation Action</h2>
+                    <p>We are one of only two subspecies of giraffes that have improved their conservation status from ‘endangered’ to ‘vulnerable’ and ‘near threatened’, the other is the Western African giraffe. <br><br> Like many endangered animals, we need help from you and the world’s conservationists to help us breed and translocate to the wild to rebuild our population. Conservation education is vital to creating awareness of our plight, especially among the youth, and joint efforts between schools, governments, and conservation organizations, like those at Al Ain Zoo, are needed before we become extinct.</p>
+                </div>
+                <div class="abt-right">
+                    <h2>Life Span</h2>
+                    <p>15 to 20 years</p>
+                    <h2>Young</h2>
+                    <h4>Gestation <span>: 14 months</span></h4>
+                    <h4>Number of young at birth <span>: Usually 1</span></h4>
+                    <h4>Height at birth<span>: 6 feet (1.8 meters)</span></h4>
+                    <h4>Weight at birth <span>: 100 to 220 pounds (45 to 100 kilograms)</span></h4>
+                    <h4>Age of maturity <span>: 3 to 5 years</span></h4>
+                    <h2>Size</h2>
+                    <h4>Height <span>: Females, up to 14 feet (4.3 meters); males, up to 18 feet (5.5 meters)</span></h4>
+                    <h4>Weight <span>: Females, up to 1,500 pounds (680 kilograms); males, up to 3,000 pounds (1,360 kilograms)</span></h4>
+                    <h2>Fun Facts</h2>
+                    <p id="border">A giraffe's feet are the size of a dinner plate—12 inches across (30.5 centimeters). <br><br> The record running speed of a giraffe is 34.7 miles per hour (56 kilometers per hour). <br><br> A giraffe’s eyes are the size of golf balls. <br><br> Giraffe calves grow 1 inch (2.54 centimeters) each day during their first week.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="show">
+                <h2>GALLERY</h2>
+            </div>
+            <div class="container">
+                <div class="gallery">
+                    <img src="images/ger1.jpg"> 
+                    <img src="images/ger2.jpg">
+                    <img src="images/ger3.jpg">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="animal_st">
+                <h2>DISCOVER WILDLIFE</h2>
+                <p id="Discover">More Animals to explore at Al Ain Zoo!!</p>    
+                <div class="circles">
+                    <div class="circle-container">
+                        <div class="bird circle" onmouseover="playSound('leopard')"></div>
+                        <a href="leapord.html" class="labe">Arabian Leopard</a>
+                      </div>
+                      <audio id="sound-leo">
+                        <source src="images/leopard.mp3">
+                        Your browser does not support the audio element.
+                      </audio>
+                      <div class="circle-container">
+                        <div class="mamal circle" onmouseover="playSound('rhino')"></div>
+                        <a href="rhino.html" class="labe">White Rhinoceros</a>
+                        <p class="after"></p>
+                      </div>
+                      <audio id="sound-rhino">
+                        <source src="images/rhino.mp3">
+                        Your browser does not support the audio element.
+                      </audio>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script>
+        // hover sound effect 
+        var soundLeo = document.getElementById("sound-leo");
+        var soundRhino = document.getElementById("sound-rhino");
+
+        function playSound(element) {
+            var sound;
+            if (element === "leopard") {
+                sound = soundLeo;
+            } else if (element === "rhino") {
+                sound = soundRhino;
+            }
+
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play();
+                setTimeout(stopSound, 9000, sound); 
+            }
+        }
+
+        function stopSound(sound) {
+            sound.pause();
+            sound.currentTime = 0; 
+        }
+    </script>
+</body>
+</html>

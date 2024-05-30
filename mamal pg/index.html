@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammal</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js "></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/index.html" class="active">home <span></span></a></li> 
+            <li><a href="/birds/bird.html">birds <span></span></a></li>
+            <li><a href="/reptile/reptile.html">reptiles <span></span></a></li>
+            <li><a href="/login pg/login.html">login <span></span></a></li>
+            <li><a href="/contact us/contact.css">contact <span></span></a></li>
+        </ul>
+        </nav>
+    </header>
+        <div class="start">
+            <img src="images/hill1.png" id="hill1">
+            <img src="images/hill2.png" id="hill2">
+            <img src="images/hill3.png" id="hill3">
+            <img src="images/hill4.png" id="hill4">
+            <img src="images/hill5.png" id="hill5">
+            <img src="images/tree.png" id="tree">
+            <h2 id="title">MAMMALS <br> &nbsp; Al Ain Zoo</h2>
+            <img src="images/leaf.png" id="leaf">
+            <img src="images/plant.png" id="plant">
+        </div> 
+        <section class="yes">
+            <div  class="table">
+                <div class="table-header">
+                    <h1>Mammals</h2><sup><i>Mammalia</i></sup>
+                        <br><hr><br>
+                        <h2>DEFINING CHARACTERISTICS:</h2>
+                        <div class="table-info">
+                            <div class="tab-left">
+                                <h3>Vertebrates</h3>
+                                <p>Endothermic: a.k.a. "warm blooded"</p>
+                                <p>Have hair on their bodies</p>
+                                <p>Produce milk to feed their young</p>
+                            </div>
+                            <div class="tab-right">
+                                <p><span>SMALLEST</span>: hog-nosed bat (0.05 ounces/1.4 grams)</p>
+                                <p><span>LARGEST</span>: blue whale (150 tons/136 metric tonnes)</p>
+                                <p><span>NUMBER OF SPECIES WORLDWIDE</span>: more than 4,000</p>
+                            </div>
+                        </div>
+                        <hr>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="picture">
+                <div class="inside">
+                </div>
+            </div>
+            <div class="wild"> 
+                <h2>Get ready for a <span>WILD</span> visit!</h2>
+                <p>Animals play an important role in our lives. As humans, we have a responsibility to treat these animals with respect and care. <br>We are the most visited zoo in the UAE, dedicated to conservation and education, with a mission to prevent extinction.</p>
+                <p id="space"> <br>Here are some of the animals you will meet during your journey to the Ain Zoo, home to over <span>10,000</span> animals representing <span>600</span> species.</p>
+            </div>
+        </section>
+        <section>
+            <div class="animal_st">
+                <h2>Our Animals</h2>    
+                <div class="circles">
+                  <div class="circle-container">
+                    <div class="bird circle" onmouseover="playSound('leopard')"></div>
+                    <a href="leapord.html" class="labe">Arabian Leopard</a>
+                  </div>
+                  <audio id="sound-leo">
+                    <source src="images/leopard.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="mamal circle" onmouseover="playSound('rhino')"></div>
+                    <a href="rhino.html" class="labe">White Rhinoceros</a>
+                    <p class="after"></p>
+                  </div>
+                  <audio id="sound-rhino">
+                    <source src="images/rhino.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="reptile circle" ></div>
+                    <a href="GIRAFFE.html" class="labe">ROTHSCHILD’S GIRAFFE</a>
+                  </div>
+                </div>
+              </div>
+        </section>
+    <script>
+        // parllax scroll 
+        let hill1 = document.getElementById('hill1');
+        let hill2 = document.getElementById('hill2');
+        let hill3 = document.getElementById('hill3');
+        let hill4 = document.getElementById('hill4');
+        let hill5 = document.getElementById('hill5');
+        let tree = document.getElementById('tree');
+        let leaf = document.getElementById('leaf');
+        let plant = document.getElementById('plant');
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            leaf.style.top = value * -1.5 + 'px';
+            leaf.style.left = value * 1.5 + 'px';
+            hill5.style.left = value * 1.5 + 'px';
+            hill4.style.left = value * -1.5 + 'px';
+            hill1.style.top = value * 1 + 'px';
+        }
+        )
+        // hover sound effect 
+        var soundLeo = document.getElementById("sound-leo");
+        var soundRhino = document.getElementById("sound-rhino");
+
+        function playSound(element) {
+            var sound;
+            if (element === "leopard") {
+                sound = soundLeo;
+            } else if (element === "rhino") {
+                sound = soundRhino;
+            }
+
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play();
+                setTimeout(stopSound, 9000, sound); 
+            }
+        }
+
+        function stopSound(sound) {
+            sound.pause();
+            sound.currentTime = 0; 
+        }
+
+    </script>
+    
+    
+    
+</body>
+</html>
