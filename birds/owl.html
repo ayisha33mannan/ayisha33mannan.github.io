@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Eagle Owl </title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Bubblegum Sans', cursive; 
+        }
+        p, span, a {
+            font-family: 'Open Sans', sans-serif; 
+        }
+        html{
+            overflow-x: hidden; 
+        }
+        body{
+            min-height: 100vh;
+            background-color: #422A12;
+        }
+        header {
+            height: 60vh;
+            width: 100%;
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: center -50px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60vh;
+            background-color: rgba(0, 0, 0, 0.4); 
+            z-index: 1;
+
+        }
+        /* nav bar start*/
+        nav {
+            z-index: 9000;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            padding: 20px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul {
+            margin: 0; 
+            padding: 0; 
+            list-style: none;
+        }
+        ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            transition:  0.8s;
+        }
+        nav a:hover {
+            color: #d68f50;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            -webkit-text-stroke: 0px;
+        }
+        nav a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 2px solid #BB661B;
+            border-radius: 20px;
+            transform: scale(0) translateY(50px);
+            transition: 0.5s;
+        }
+        nav a:hover span {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        nav .logo {
+            width: 80px;
+            margin-left: -71px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 5%;
+                left: -240px;
+            }
+            ul li {
+                display: block; 
+                margin-left: 0; 
+                margin-bottom: 10px; 
+            }
+            nav .logo {
+                margin-left: 250px;
+            }
+        }
+        .title1{
+            margin: 20px;
+            h1{
+                font-size: 70px;
+                letter-spacing: 1.5px;
+                color: #BB661B;
+            }
+            h2{
+                font-size: 25px;
+                color: #d68f50;            }
+            hr{
+                margin: 7px 0px;
+                border: none; 
+                height: 2px; 
+                background-color: #F9E8D9; 
+                padding: 0;
+            }
+        }
+        .table-info{
+            color: #F9E8D9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-top: 20px;
+            h3{
+                margin-left: -3px;
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .tab-left{
+            p{
+                color: #F9E8D9;           
+            }
+        }
+        .tab-right{
+            h3{
+                margin-left: -3px;
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .tab-left,
+        .tab-right{
+            flex-basis: 45%;
+            margin-bottom: 20px;
+        }
+        /* parallax image --start--- */
+        .picture{
+            position: relative;
+            background: url(images/move-o.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 10% ;
+            background-attachment: fixed;
+        }
+        .inside{
+            padding: 15% 0;
+        }
+        /* about section ---start--- */
+        .about{
+            margin: 20px;
+            #head, #text{
+                display: inline;
+            }
+        }
+        .abt-info{
+            color: #F9E8D9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-top: 20px;
+            h3{
+                margin-left: -3px;
+                /* pointers or 3rd hading color  */
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .abt-left{
+            flex-basis: 60%;
+            margin-bottom: 20px;
+            h1{
+                font-size: 60px;
+                color: #BB661B; 
+            }
+            h2{
+                color: #d68f50;
+            }
+            #Threats{
+                padding-top: 5px;
+            }
+            p{
+                color: #F9E8D9;
+                padding: 5px;        
+            }
+        }
+        .abt-right{
+            flex-basis: 40%;
+            margin-bottom: 20px;
+            margin-top: 23px;
+            h2{
+                padding: 3px 0px;
+                border-top: 2px solid  #BB661B; 
+                padding-top: 5px;
+                color: #d68f50;
+            }
+            #border{
+                border-bottom: 2px solid #BB661B; 
+                padding-bottom: 5px;
+            }
+            /* h3 wasn't working */
+            h4{
+                font-size: 17px;
+                padding: 2px 0px 2px 10px;
+                color: #F7B787;
+                span{
+                    font-size: 15px;
+                    font-weight: 2;
+                    color: #F9E8D9;
+                }
+            }
+            p{
+                padding: 2px 0px 2px 10px;
+                color: #F9E8D9;
+            }
+
+        }
+        /* about section ---end--- */
+        /* animals ----------starting------ */
+        .animal_st {
+            width: 100%;
+            height: 430px;
+            position: relative;
+            background-color: #422A12;
+            background-repeat: no-repeat;
+            background-size: cover;
+            h2 {
+            font-size: 45px;
+            padding: 20px 0px;
+            position: absolute;
+            top: 50%;
+            left: 36%;
+            top: 0;
+            color: #BB661B;
+            }
+            #Discover{
+                position: absolute;
+                top: 18%;
+                left: 35%;
+                font-size: 23px;
+                color: #d68f50;
+            }
+        }
+        .circles {
+            display: flex;
+            flex-wrap: wrap ;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 100px;
+            height: 100%;
+            width: 100%
+        }
+        
+        .circle-container {
+            text-align: center;
+            position: relative;
+        }
+        .circle {
+            width: 230px;
+            height: 230px;
+            border: 2px solid #BB661B;
+            background-color: transparent;
+            background-size: cover;
+            transition: background-color 0.5s;
+            position: relative;
+        }
+        .bird.circle {
+            background-image: url('images/icon1.jpg');
+            background-position: center -10px;
+            background-repeat: no-repeat;
+        }
+        
+        .mamal.circle {
+            background-image: url('images/icon2.jpg');
+            background-position: center 0% ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .circle-container:hover .circle {
+            border: none;
+            transform: scale(1.03);
+            filter: none;
+            box-shadow: 15px 15px 30px  #000;
+        }
+        .circle-container::before{
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            top: -4px;
+            left: -4px;
+            border: 4px dashed #F7B787;
+            opacity: 0;
+        }
+
+        .circle-container:hover:before{
+            animation: spin 10s linear infinite;
+            opacity: 1;
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .labe {
+            position: absolute;
+            bottom: -55px;
+            left: 50%;
+            text-transform: uppercase;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-weight: 600;
+            transition:  0.8s;
+            color: #F9E8D9;
+            text-decoration: none;
+        }
+        /* animals ----------ending------ */
+        /* gallery ----------start--------- */
+        .show{
+            margin-top: 25px;
+            border-bottom: 2px solid #F9E8D9; 
+            padding-bottom: 5px;
+            h2{
+                font-size: 38px;
+                text-align: center;
+                color: #BB661B; 
+
+            }
+        }
+        .container{
+            width: 100%;
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 8%;
+            border-bottom: 2px solid #F9E8D9; 
+            padding-bottom: 50px;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-gap: 30px;
+            img{
+                width: 100%;
+            }
+        }
+        /* gallery ----------end--------- */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/index.html" class="active">home <span></span></a></li> 
+            <li><a href="/mamal pg/index.html">mammals <span></span></a></li>
+            <li><a href="/birds/bird.html">birds <span></span></a></li>
+            <li><a href="/reptile/reptile.html">reptiles <span></span></a></li>
+            <li><a href="/login pg/login.html">login <span></span></a></li>
+            <li><a href="/contact us/contact.html">contact <span></span></a></li>
+        </ul>
+        </nav>
+        <img src="images/oo.png"  class="bg">
+        <div class="overlay"></div>
+    </header>
+    <main>
+        <section class="title1">
+            <h1>OWL</h1>
+            <h2>DESERT EAGLE OWL</h2>
+            <hr>
+            <div class="table-info">
+                <div class="tab-left">
+                    <h3>Class <span>: Aves (Birds)</span></h3>
+                    <h3>Scientific Name <span>: Bubo ascalaphus</span></h3>
+                    <h3>FAMILY <span>: Strigidae</span></h3>
+                </div>
+                <div class="tab-right">
+                    <h3>SPECIES <span>: ascalaphus</span></h3>
+                    <h3>GENUS <span>: Bubo</span></h3>
+                    <h3>ORDER <span>: Strigiformes</span></h3>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <div class="picture">
+                <div class="inside"></div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="abt-info">
+                <div class="abt-left">
+                    <h1>About</h1>
+                    <h2 id="head">What makes owls so mysterious to us?</h2>
+                    <p id="text">They have had a powerful hold on the human imagination across centuries and cultures, appearing as warnings of doom and as symbols of wisdom. Of course, we know that most are nocturnal, and their nighttime habits may make them seem scary or spooky to us. We think of them flying silently over churchyards, and their eyes seem to glow in the dark. But there’s nothing supernatural about the acute hearing and sight of owls. Far from fearing them, we should appreciate owls as competent predators that hunt mice and other rodents, helping to maintain a balance in nature. <br><br>Everything about an owl’s body makes it the ideal bird for night living. An owl has the best night vision of any animal, and its hearing is amazing, too.</p>
+                    <h2 id="Threats">Threats</h2>
+                    <p> Although globally Desert Eagle Owl's are not threatened, the main threat is persecution in certain localities where they are viewed as ‘evil spirits’ and killed on sight. </p>
+                    <h2>Conservation Action</h2>
+                    <p>Whether you live in the city or the country, owls help us by controlling rodent and insect populations. But we often treat owls as enemies, and they fall victim to poison when fields are sprayed to kill weeds, insects, and rodents. We can help owls by finding other ways to control pests: for example, let owls and other predators do this job. They also need open spaces and trees if they are to survive. Each type of owl has different needs: some need forests, like the spotted owl, while the largest owl, the Eurasian eagle-owl, needs large territories and large prey. <br><br>Owls don’t have teeth, so they can’t chew their food; they rip their food apart and swallow the chunks or swallow their prey whole. They cough up or “cast” packets of bones and hair they are unable to digest. Dissecting these pellets (as many a biology student has done) reveals the owl’s diet.</p>
+                </div>
+                <div class="abt-right">
+                    <h2>Life Span</h2>
+                    <p>11 years in the wild; up to 15 years in zoos</p>
+                    <h2>Young</h2>
+                    <h4>Number of eggs laid <span>: 2 to 3 per clutch</span></h4>
+                    <h4>Incubation period <span>: 31 to 36 days</span></h4>
+                    <h2>Size</h2>
+                    <h4>Height <span>: 18 to 20 inches (45 to 50 centimeters).</span></h4>
+                    <h4>Weight <span>: 3.5 to 4.5 pounds (1.6 to 2 kilograms); females are generally heavier than males.</span></h4>
+                    <h2>Fun Facts</h2>
+                    <p id="border">The Desert Eagle Owl is known for its distinctive ear tufts and large, orange-yellow eyes. <br><br>It primarily inhabits arid regions such as deserts and rocky outcrops, making it well-adapted to hot and dry climates. <br><br>Its diet mainly consists of small mammals, birds, and reptiles, showcasing its adaptability as a predator. <br><br>The Desert Eagle Owl's call is a deep, resonant hoot that can be heard over long distances, used for communication and territorial defense. <br><br>Most owls live in trees, but burrowing owls live in underground burrows.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="show">
+                <h2>GALLERY</h2>
+            </div>
+            <div class="container">
+                <div class="gallery">
+                    <img src="images/oo1.jpg"> 
+                    <img src="images/oo2.jpg">
+                    <img src="images/oo4.jpg">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="animal_st">
+                <h2>DISCOVER WILDLIFE</h2>
+                <p id="Discover">More Animals to explore at Al Ain Zoo!!</p>    
+                <div class="circles">
+                  <div class="circle-container">
+                    <div class="bird circle" onmouseover="playSound('Kookaburra')"></div>
+                    <a href="laughing.html" class="labe">Laughing Kookaburra</a>
+                  </div>
+                  <audio id="sound-Kookaburra">
+                    <source src="images/kookaburra_sound.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="mamal circle" onmouseover="playSound('Eagle')"></div>
+                    <a href="Eagle.html" class="labe">Bald Eagle</a>
+                    <p class="after"></p>
+                  </div>
+                  <audio id="sound-Eagle">
+                    <source src="images/bald_eagle.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script>
+        // hover sound effect 
+        var soundKookaburra = document.getElementById("sound-Kookaburra");
+        var soundEagle = document.getElementById("sound-Eagle");
+
+        function playSound(element) {
+            var sound;
+            if (element === "Kookaburra") {
+                sound = soundKookaburra;
+            } else if (element === "Eagle") {
+                sound = soundEagle;
+            }
+
+            if (sound) {
+                sound.currentTime = 0; 
+                sound.play();
+                setTimeout(stopSound, 9000, sound); 
+            }
+        }
+
+        function stopSound(sound) {
+            sound.pause();
+            sound.currentTime = 0; 
+        }
+    </script>
+</body>
+</html>

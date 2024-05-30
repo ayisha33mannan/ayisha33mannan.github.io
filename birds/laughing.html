@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird/ Laughing Kookaburra</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Bubblegum Sans', cursive; 
+        }
+        p, span, a {
+            font-family: 'Open Sans', sans-serif; 
+        }
+        html{
+            overflow-x: hidden; 
+        }
+        body{
+            min-height: 100vh;
+            background-color: #422A12;
+        }
+        header {
+            height: 60vh;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: center 50px;
+        }
+        .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust the alpha value for transparency */
+    z-index: 1; /* Ensure the overlay appears above the background */
+}
+        /* nav bar start*/
+        nav {
+            z-index: 9000;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            padding: 20px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul {
+            margin: 0; 
+            padding: 0; 
+            list-style: none;
+        }
+        ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            font-size: 17px;
+            font-weight: 700;
+            transition:  0.8s;
+        }
+        nav a:hover {
+            color: #d68f50;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            -webkit-text-stroke: 0px;
+        }
+        nav a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 2px solid #BB661B;
+            border-radius: 20px;
+            transform: scale(0) translateY(50px);
+            transition: 0.5s;
+        }
+        nav a:hover span {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        nav .logo {
+            width: 80px;
+            margin-left: -71px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 5%;
+                left: -240px;
+            }
+            ul li {
+                display: block; 
+                margin-left: 0; 
+                margin-bottom: 10px; 
+            }
+            nav .logo {
+                margin-left: 250px;
+            }
+        }
+        .title1{
+            margin: 20px;
+            h1{
+                font-size: 70px;
+                letter-spacing: 1.5px;
+                color: #BB661B;
+            }
+            h2{
+                font-size: 25px;
+                color: #d68f50;            }
+            hr{
+                margin: 7px 0px;
+                border: none; 
+                height: 2px; 
+                background-color: #F9E8D9; 
+                padding: 0;
+            }
+        }
+        .table-info{
+            color: #F9E8D9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-top: 20px;
+            h3{
+                margin-left: -3px;
+                /* pointers or 3rd hading color  */
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .tab-left{
+            p{
+                color: #F9E8D9;           
+            }
+        }
+        .tab-right{
+            h3{
+                margin-left: -3px;
+                /* pointers or 3rd hading color  */
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .tab-left,
+        .tab-right{
+            flex-basis: 45%;
+            margin-bottom: 20px;
+        }
+        /* parallax image --start--- */
+        .picture{
+            position: relative;
+            background: url(images/move-k.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center -3% ;
+            background-attachment: fixed;
+        }
+        .inside{
+            padding: 15% 0;
+        }
+        /* about section ---start--- */
+        .about{
+            margin: 20px;
+            #head, #text{
+                display: inline;
+            }
+        }
+        .abt-info{
+            color: #F9E8D9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-top: 20px;
+            h3{
+                margin-left: -3px;
+                /* pointers or 3rd hading color  */
+                color: #F7B787;
+                font-size: 23px;
+                letter-spacing: 2px;
+                padding: 4px 0px;
+                span{
+                    font-size: 15px;
+                    color: #F9E8D9;
+                    letter-spacing: 1px;
+                    font-weight: 5;
+                }
+            }
+        }
+        .abt-left{
+            flex-basis: 60%;
+            margin-bottom: 20px;
+            h1{
+                font-size: 60px;
+                color: #BB661B; 
+            }
+            h2{
+                color: #d68f50;
+            }
+            #Threats{
+                padding-top: 5px;
+            }
+            p{
+                color: #F9E8D9;
+                padding: 5px;        
+            }
+        }
+        .abt-right{
+            flex-basis: 40%;
+            margin-bottom: 20px;
+            margin-top: 23px;
+            h2{
+                padding: 3px 0px;
+                border-top: 2px solid  #BB661B; 
+                padding-top: 5px;
+                color: #d68f50;
+            }
+            #border{
+                border-bottom: 2px solid #BB661B; 
+                padding-bottom: 5px;
+            }
+            /* h3 wasn't working */
+            h4{
+                font-size: 17px;
+                padding: 2px 0px 2px 10px;
+                color: #F7B787;
+                span{
+                    font-size: 15px;
+                    font-weight: 2;
+                    color: #F9E8D9;
+                }
+            }
+            p{
+                padding: 2px 0px 2px 10px;
+                color: #F9E8D9;
+            }
+
+        }
+        /* about section ---end--- */
+        /* animals ----------starting------ */
+        .animal_st {
+            width: 100%;
+            height: 430px;
+            position: relative;
+            background-color: #422A12;
+            background-repeat: no-repeat;
+            background-size: cover;
+            h2 {
+            font-size: 45px;
+            padding: 20px 0px;
+            position: absolute;
+            top: 50%;
+            left: 36%;
+            top: 0;
+            color: #BB661B;
+            }
+            #Discover{
+                position: absolute;
+                top: 18%;
+                left: 35%;
+                font-size: 23px;
+                color: #d68f50;
+            }
+        }
+        .circles {
+            display: flex;
+            flex-wrap: wrap ;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 100px;
+            height: 100%;
+            width: 100%
+        }
+        
+        .circle-container {
+            text-align: center;
+            position: relative;
+        }
+        .circle {
+            width: 230px;
+            height: 230px;
+            border: 2px solid #BB661B;
+            background-color: transparent;
+            background-size: cover;
+            transition: background-color 0.5s;
+            position: relative;
+        }
+        .bird.circle {
+            background-image: url('images/icon2.jpg');
+            background-position: center -10px;
+            background-repeat: no-repeat;
+        }
+        
+        .mamal.circle {
+            background-image: url('images/icon3.jpg');
+            background-position: center 0% ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .circle-container:hover .circle {
+            border: none;
+            transform: scale(1.03);
+            filter: none;
+            box-shadow: 15px 15px 30px  #000;
+        }
+        .circle-container::before{
+            content: '';
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            top: -4px;
+            left: -4px;
+            border: 4px dashed #F7B787;
+            opacity: 0;
+        }
+
+        .circle-container:hover:before{
+            animation: spin 10s linear infinite;
+            opacity: 1;
+        }
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .labe {
+            position: absolute;
+            bottom: -55px;
+            left: 50%;
+            text-transform: uppercase;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-weight: 600;
+            transition:  0.8s;
+            color: #F9E8D9;
+            text-decoration: none;
+        }
+        /* animals ----------ending------ */
+        /* gallery ----------start--------- */
+        .show{
+            margin-top: 25px;
+            border-bottom: 2px solid #F9E8D9; 
+            padding-bottom: 5px;
+            h2{
+                font-size: 38px;
+                text-align: center;
+                color: #BB661B; 
+
+            }
+        }
+        .container{
+            width: 100%;
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 8%;
+            border-bottom: 2px solid #F9E8D9; 
+            padding-bottom: 50px;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-gap: 30px;
+            img{
+                width: 100%;
+            }
+        }
+        /* gallery ----------end--------- */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/index.html" class="active">home <span></span></a></li> 
+            <li><a href="/mamal pg/index.html">mammals <span></span></a></li>
+            <li><a href="/birds/bird.html">birds <span></span></a></li>
+            <li><a href="/reptile/reptile.html">reptiles <span></span></a></li>
+            <li><a href="/login pg/login.html">login <span></span></a></li>
+            <li><a href="/contact us/contact.html">contact <span></span></a></li>
+        </ul>
+        </nav>
+        <img src="images/bb.png"  class="bg">
+        <div class="overlay"></div>
+    </header>
+    <main>
+        <section class="title1">
+            <h1>Laughing Kookaburra</h1>
+            <h2>Dacelo novaeguineae</h2>
+            <hr>
+            <div class="table-info">
+                <div class="tab-left">
+                    <h3>Class <span>: Aves (Birds)</span></h3>
+                    <h3>Scientific Name <span>: Dacelo novaeguineae</span></h3>
+                    <h3>FAMILY <span>: Alcendinidae</span></h3>
+                </div>
+                <div class="tab-right">
+                    <h3>SPECIES <span>: novaeguineae</span></h3>
+                    <h3>GENUS <span>: Dacelo</span></h3>
+                    <h3>ORDER <span>: Coraciiformes</span></h3>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <div class="picture">
+                <div class="inside"></div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="abt-info">
+                <div class="abt-left">
+                    <h1>About</h1>
+                    <h2 id="head">Plain bird, fancy voice ~</h2>
+                    <p id="text">The laughing kookaburra is the largest member of the kingfisher family and was once called the giant kingfisher. Most kingfishers are brightly colored—often blue or green—and many of them specialize in diving into streams and ponds to catch fish. The laughing kookaburra, however, is plainly colored and rarely eats fish! It has a light beige or white head and breast with brown wings and back. The head has a brown stripe like a mask crossing each eye. The beak is heavy and boat-shaped. The kookaburra’s breast has pale gray, wavy lines, and the outsides of the wings are speckled with pale blue dots. The male laughing kookaburra often has blue above the base of the tail. Both sexes have a rusty red tail with black bars and white tips. The female is slightly larger than the male. <br><br>The laughing kookaburra is one of four species of kookaburra; the other three are the blue-winged kookaburra, the spangled kookaburra, and the rufous-bellied kookaburra.</p>
+                    <h2 id="Threats">Threats</h2>
+                    <p>The Laughing Kookaburra, native to eastern Australia, faces several threats that jeopardize its population and habitat. Habitat destruction due to urban development, agriculture, and logging significantly reduces the availability of suitable nesting sites and food sources for these iconic birds. Additionally, the introduction of invasive species, such as feral cats and foxes, poses a direct predatory threat to both adult kookaburras and their chicks. Pesticide use in agricultural areas can also lead to a decline in their prey, such as insects and small vertebrates, further impacting their food supply. Climate change introduces additional challenges, including altered weather patterns and increased frequency of extreme events, which can disrupt breeding cycles and reduce the availability of resources. Conservation efforts are crucial to address these threats and ensure the survival of the Laughing Kookaburra in its natural habitat.</p>
+                    <h2>Conservation Action</h2>
+                    <p>Australia is full of unique wildlife, but the laughing kookaburra must be one of the most well known. The bird prefers dry forests with streams but is also commonly found in backyards, parks, and gardens. Its population is stable, and it seems to thrive in the presence of humans: the birds are known to be bold and steal food from picnics, sometimes snatching hot meat straight from the barbecue! <br><br>The kookaburra’s natural range is eastern and southern Australia, but in 1897 it was introduced into the southwest corner of the continent and in 1905 into Tasmania as well. Several attempts were made to import kookaburras into New Zealand, and a population became established around the city of Auckland. <br><br>Australians are proud of their famous bird; Olly the Kookaburra was one of three mascots for the 2000 Olympic Games in Sydney, Australia.</p>
+                </div>
+                <div class="abt-right">
+                    <h2>Life Span</h2>
+                    <p>11 years; up to 15 years in zoos</p>
+                    <h2>Young</h2>
+                    <h4>Number of eggs laid <span>: 2 to 3 by a dominant female; additional eggs (up to 5) laid by female helpers</span></h4>
+                    <h4>Incubation period <span>: 24 to 29 days</span></h4>
+                    <h2>Size</h2>
+                    <h4>Height <span>: 15.4 to 16.5 inches (39 to 42 centimeters)</span></h4>
+                    <h4>Weight <span>: 6.9 to 16.4 ounces (196 to 465 grams); females slightly heavier than males</span></h4>
+                    <h2>Fun Facts</h2>
+                    <p id="border">The first hatching of laughing kookaburras in the Western Hemisphere occurred at the San Diego Zoo in 1961. <br><br>According to a legend of some of the indigenous peoples of Australia, the laughing kookaburra’s song is a signal for the sky people to light the sun each morning. <br><br>Fearless kookaburras have been documented stealing food from a snake. <br><br> Laughing kookaburras seem to be able to determine the sex of their offspring: usually, the first egg to be laid in a clutch will be a male and the second egg a female. <br><br> Many people don't know that they have heard the laughing kookaburra’s song. The call has been used as a sound effect in jungle movies for many years, where it sounds like a group of monkeys. <br><br>Laughing kookaburras are known for their distinctive "laughing" call, which is often heard in the early morning and at dusk. This call isn't just a vocalization; it's also a form of territorial communication among kookaburra groups.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="show">
+                <h2>GALLERY</h2>
+            </div>
+            <div class="container">
+                <div class="gallery">
+                    <img src="images/kk1.jpg"> 
+                    <img src="images/kk2.jpg">
+                    <img src="images/kk3.jpg">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="animal_st">
+                <h2>DISCOVER WILDLIFE</h2>
+                <p id="Discover">More Animals to explore at Al Ain Zoo!!</p>    
+                <div class="circles">
+                  <div class="circle-container">
+                    <div class="bird circle" onmouseover="playSound('Eagle')"></div>
+                    <a href="Eagle.html" class="labe">Bald Eagle</a>
+                  </div>
+                  <audio id="sound-Eagle">
+                    <source src="images/bald_eagle.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="mamal circle" onmouseover="playSound('OWL')"></div>
+                    <a href="owl.html" class="labe">DESERT OWL</a>
+                    <p class="after"></p>
+                  </div>
+                  <audio id="sound-OWL">
+                    <source src="images/owl.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script>
+        // hover sound effect 
+        var soundEagle = document.getElementById("sound-Eagle");
+        var soundOWL = document.getElementById("sound-OWL");
+
+        function playSound(element) {
+            var sound;
+            if (element === "Eagle") {
+                sound = soundEagle;
+            } else if (element === "OWL") {
+                sound = soundOWL;
+            }
+
+            if (sound) {
+                sound.currentTime = 0; 
+                sound.play();
+                setTimeout(stopSound, 9000, sound); 
+            }
+        }
+
+        function stopSound(sound) {
+            sound.pause();
+            sound.currentTime = 0; 
+        }
+    </script>
+</body>
+</html>

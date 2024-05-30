@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fly.css">
+</head>
+<body>
+    <header>
+        <div class="start">
+            <video autoplay loop muted plays-inline class="video">
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <nav>
+                <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+                <ul>
+                    <li><a href="/index.html" class="active">home <span></span></a></li> 
+                    <li><a href="/mamal pg/index.html">Mammals <span></span></a></li>
+                    <li><a href="/reptile/reptile.html">Reptiles <span></span></a></li>
+                    <li><a href="/login pg/login.html">login <span></span></a></li>
+                    <li><a href="/contact us/contact.html">contact <span></span></a></li>
+                </ul>
+            </nav>
+            <div class="heading">
+                <h1 id="title">BIRDS <br>Al Ain Zoo</h1>    
+            </div>   
+        </div>
+    </header>
+    <main>
+        <section class="yes">
+            <div  class="table">
+                <div class="table-header">
+                    <h1>Birds</h2><sup><i>Aves</i></sup>
+                        <br><hr><br>
+                        <h2>DEFINING CHARACTERISTICS:</h2>
+                        <div class="table-info">
+                            <div class="tab-left">
+                                <h3>Vertebrates</h3>
+                                <p>Endothermic (warm blooded)</p>
+                                <p>Feathers; made of keratin, like hair and fingernails</p>
+                                <p>Egg layers</p>
+                            </div>
+                            <div class="tab-right">
+                                <p><span>Smallest</span>: Bee Hummingbird (0.056 ounces/1.6–2 grams)</p>
+                                <p><span>Largest</span>: Common Ostrich (290 pounds/100–130 kg)</p>
+                                <p><span>NUMBER OF SPECIES WORLDWIDE</span>: more than 9,800</p>
+                            </div>
+                        </div>
+                        <hr>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="picture">
+                <div class="inside">
+                </div>
+            </div>
+            <div class="wild"> 
+                <h2>Get ready for a <span>WILD</span> visit!</h2>
+                <p>Animals play an important role in our lives. As humans, we have a responsibility to treat these animals with respect and care. <br>We are the most visited zoo in the UAE, dedicated to conservation and education, with a mission to prevent extinction.</p>
+                <p id="space"> <br>Here are some of the animals you will meet during your journey to the Ain Zoo, home to over <span>10,000</span> animals representing <span>600</span> species.</p>
+            </div>
+        </section>
+        <section>
+            <div class="animal_st">
+                <h2>Our Animals</h2>    
+                <div class="circles">
+                  <div class="circle-container">
+                    <div class="bird circle" onmouseover="playSound('Kookaburra')"></div>
+                    <a href="laughing.html" class="labe">Laughing Kookaburra</a>
+                  </div>
+                  <audio id="sound-Kookaburra">
+                    <source src="images/kookaburra_sound.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="mamal circle" onmouseover="playSound('Eagle')"></div>
+                    <a href="Eagle.html" class="labe">Bald Eagle</a>
+                    <p class="after"></p>
+                  </div>
+                  <audio id="sound-Eagle">
+                    <source src="images/bald_eagle.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="reptile circle"  onmouseover="playSound('Owl')"></div>
+                    <a href="owl.html" class="labe">DESERT Owl</a>
+                  </div>
+                  <audio id="sound-Owl">
+                    <source src="images/owl.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script>
+        // hover sound effect 
+        var soundKookaburra = document.getElementById("sound-Kookaburra");
+        var soundEagle = document.getElementById("sound-Eagle");
+        var soundOwl = document.getElementById("sound-Owl");
+
+        function playSound(element) {
+            var sound;
+            if (element === "Kookaburra") {
+                sound = soundKookaburra;
+            } else if (element === "Eagle") {
+                sound = soundEagle;
+            } else if (element === "Owl") {
+                sound = soundOwl;
+            }
+
+            if (sound) {
+                sound.currentTime = 0; 
+                sound.play();
+                setTimeout(stopSound, 9000, sound); 
+            }
+        }
+
+        function stopSound(sound) {
+            sound.pause();
+            sound.currentTime = 0; 
+        }
+    </script>
+</body>
+</html>
