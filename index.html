@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="shortcut icon" href="home pg/video/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="home pg/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="start">
+            <video autoplay loop muted plays-inline class="video">
+                <source src="home pg/video/intro.mp4" type="video/mp4">
+            </video>
+        <nav>
+            <a href="index.html"><img class="logo" src="home pg/video/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html" class="active">home <span></span></a></li> 
+            <li><a href="mamal pg/index.html">Mammals <span></span></a></li>
+            <li><a href="birds/bird.html">birds <span></span></a></li>
+            <li><a href="reptile/reptile.html">Reptiles <span></span></a></li>
+            <li><a href="login pg/login.html">login <span></span></a></li>
+            <li><a href="contact us/contact.html">contact <span></span></a></li>
+        </ul>
+        </nav>
+    </div>
+    <div class="heading">
+        <h1>welcome <br> to al ain zoo</h1>
+        <a class="btn" href="#animal"><span>Explore Animals</span> </a>
+    </div>
+    </header>
+    <main>
+        <section class="bar_bg">
+                <div class="box1"><i class="fa-regular fa-clock"></i>
+                    <h3>OPENING HOURS</h3> <p><span>9 AM - 6 PM</span> Daily</p>
+                </div>
+                <div class="box2">
+                    <i class="fa-solid fa-ticket"></i>
+                    <h3>Tickets</h3> <p>Bookings and Prices</p>
+                    <a href="ticket pg/tic.html">Book Now <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+                <div class="box3">
+                    <i class="fa-solid fa-map-location-dot map"></i>
+                    <h3>Map</h3> <p>Our Locattion</p>
+                    <a href="https://www.google.com/maps/@24.1789257,55.7358385,14.32z?hl=en-US&entry=ttu"  target="_blank" >Find Us <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+        </section>
+        <section class="animate">
+            <div class="imeg">
+                <img src="home pg/video/zoo.png" class="loin" >   
+            </div>
+            
+            <div  class="about" id="about">
+                <div class="abt_heading">
+                    <h2>history </h2>
+                    <p >Founded in 1968 by the late Sheikh Zayed, the Father of our nation, Al Ain Zoo is a true family destination, providing entertainment and learning experiences in a natural outdoor environment. Today, visitors of all ages discover the zoo's wildlife and enjoy a great day out packed with fun and adventure, and explore our large animal collection of over 4000 animals.</p>
+                    <a href="history pg/history.html" class="button">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="animal" class="animal_st">
+                <h2><span>Our</span> Animals</h2>
+                <div class="circles">
+                  <div class="circle-container">
+                    <div class="bird circle"></div>
+                    <a href="birds/bird.html" class="labe"> bird</a>
+                  </div>
+                  <div class="circle-container">
+                    <div class="mamal circle"></div>
+                    <a href="mamal pg/index.html" class="labe">Mammal</a>
+                  </div>
+                  <div class="circle-container">
+                    <div class="reptile circle"></div>
+                    <a href="reptile/reptile.html" class="labe"> Reptile</a>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section id="contact" class="contain_contact">
+            <form action="https://api.web3forms.com/submit" method="POST" class="left">
+                <div class="contact_heading">
+                    <h2>contact <span>us</span></h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="5597ac17-5526-4233-beeb-7cd3c08b0876">
+                <input type="text" name="name" placeholder="Your Name" class="contact_input" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact_input" required>
+                <textarea name="message" placeholder="Your Message" class="contact_input" required></textarea>
+                <button type="submit">submit <span><i class="fa-solid fa-check check"></i></span></button>
+            </form>
+            <div class="right">
+                <div class="image-cont">
+                    <div class="image">
+                        <img class="bg1 hero" src="home pg/video/b1.jpg">
+                        <img class="bg2 hero" src="home pg/video/b2.jpg">
+                        <img class="bg3 hero" src="home pg/video/b3.jpg">
+                    </div>
+                </div>
+                <div class="lala">
+                    <div class="info">
+                        <h2><span><i class="fa-solid fa-location-dot"></i></span> Location</h2>
+                        <p>Al Ain , UAE</p>
+                    </div>
+                    <div class="mail info">
+                        <h2><span><i class="fa-solid fa-envelope"></i></span> E-mail</h2>
+                        <p>INFO@ALAINZOO.AE</p>
+                    </div>
+                    <div class="num info">
+                        <h2><span><i class="fa-solid fa-phone"></i></span> Phone Number</h2>
+                        <p>800 ZOO (966) Or +97137992000</p>
+                    </div>
+                    <div class="post info">
+                        <h2><span><i class="fa-solid fa-signs-post"></i></span> Postal Address</h2>
+                        <p>Al Ain Zoo PO BOX 1204</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <div class="pogo">
+            <img src="home pg/video/logo.png" alt="Self Defense Club Logo">
+        </div>
+        <div class="contactt">
+            <h2>Quick MAp</h2>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5257.52681829517!2d55.73319558028216!3d24.173743903985077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab0c11e939f2b%3A0x93fd29c816885330!2sAl%20Ain%20Zoo!5e0!3m2!1sen!2sae!4v1716997634140!5m2!1sen!2sae" width="250" height="200"  style="border:0; border-radius: 30%; box-shadow: 10px 10px 10px #000;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="follow">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f effect"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram effect"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-x-twitter effect"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-youtube effect"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        Made by &copy; Ayisha Mannan &nbsp;&nbsp; <a href="https://alainzoo.ae/" target="_blank">original</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="home pg/js.js" defer></script>
+</body>
+</html>
