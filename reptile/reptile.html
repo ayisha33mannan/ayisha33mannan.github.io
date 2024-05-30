@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reptile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reptile.css">
+</head>
+<body>
+    <header>
+        <div class="start">
+            <video autoplay loop muted plays-inline class="video">
+                <source src="images/SEA.mp4" type="video/mp4">
+            </video>
+        <nav>
+            <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+                <ul>
+                    <li><a href="/index.html" class="active">home <span></span></a></li> 
+                    <li><a href="/mamal pg/index.html">Mammals <span></span></a></li>
+                    <li><a href="/birds/bird.html">birds <span></span></a></li>
+                    <li><a href="/login pg/login.html">login <span></span></a></li>
+                    <li><a href="/contact us/contact.html">contact <span></span></a></li>
+                </ul>
+            </nav>
+        </nav>
+        <div class="heading">
+            <h1 id="title">REPTILES <br>Al Ain Zoo</h1>    
+        </div>
+    </div>
+    
+    </header>
+    <main>
+        <section class="yes">
+            <div  class="table">
+                <div class="table-header">
+                    <h1>Reptiles</h2><sup><i>Reptilia</i></sup>
+                        <br><hr><br>
+                        <h2>DEFINING CHARACTERISTICS:</h2>
+                        <div class="table-info">
+                            <div class="tab-left">
+                                <h3>Vertebrates</h3>
+                                <p>Endothermic- depend on warmth from sunlight to become warm and active</p>
+                                <p>Skin covered in scales or scutes</p>
+                                <p>Most young hatch from eggs (about 20 percent of snakes and lizards give live birth)</p>
+                                <p>Reptiles can be found in all types of habitats except polar ice and tundra.</p>
+                            </div>
+                            <div class="tab-right">
+                                <p>Crocodilia (crocodiles, gavials, caimans, and alligators) <SPAN>: 23 species</SPAN></p>
+                                <p>Sphenodontia (tuataras from New Zealand) <SPAN>: 2 species</SPAN></p>
+                                <p>Squamata (lizards, snakes, and worm lizards)<SPAN>: over 9,000 species</SPAN></p>
+                                <p>Testudines (turtles, terrapins and tortoises)<SPAN>: over 300 species</SPAN></p>
+                            </div>
+                        </div>
+                        <hr>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="picture">
+                <div class="inside">
+                </div>
+            </div>
+            <div class="wild"> 
+                <h2>Get ready for a <span>WILD</span> visit!</h2>
+                <p>Animals play an important role in our lives. As humans, we have a responsibility to treat these animals with respect and care. <br>We are the most visited zoo in the UAE, dedicated to conservation and education, with a mission to prevent extinction.</p>
+                <p id="space"> <br>Here are some of the animals you will meet during your journey to the Ain Zoo, home to over <span>10,000</span> animals representing <span>600</span> species.</p>
+            </div>
+        </section>
+        <section>
+            <div class="animal_st">
+                <h2>Our Animals</h2>    
+                <div class="circles">
+                  <div class="circle-container">
+                    <div class="bird circle" onmouseover="playSound('crocodilian')"></div>
+                    <a href="CROCODILIAN.html" class="labe">Crocodilian</a>
+                  </div>
+                  <audio id="sound-crock">
+                    <source src="images/crocodilian.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="mamal circle" onmouseover="playSound('LIZARD')"></div>
+                    <a href="LIZARD.html" class="labe">LIZARD</a>
+                    <p class="after"></p>
+                  </div>
+                  <audio id="sound-liz">
+                    <source src="images/LIZARD.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div class="circle-container">
+                    <div class="reptile circle"  onmouseover="playSound('tortoise')"></div>
+                    <a href="Tortoise.html" class="labe">AFRICAN TORTOISE</a>
+                  </div>
+                  <audio id="sound-tur">
+                    <source src="images/tortoise.mp3">
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        // hover sound effect 
+        var soundLeo = document.getElementById("sound-crock");
+        var soundRhino = document.getElementById("sound-liz");
+        var soundTur = document.getElementById("sound-tur");
+
+        function playSound(element) {
+            var sound;
+            if (element === "crocodilian") {
+                sound = soundLeo;
+            } else if (element === "LIZARD") {
+                sound = soundRhino;
+            } else if (element === "tortoise") {
+                sound = soundTur;
+            }
+
+            if (sound) {
+                sound.currentTime = 0; 
+                sound.play();
+                setTimeout(stopSound, 9000, sound); 
+            }
+        }
+
+        function stopSound(sound) {
+            sound.pause();
+            sound.currentTime = 0; 
+        }
+    </script>
+</body>
+</html>
