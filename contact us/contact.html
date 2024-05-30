@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html"><img class="logo" src="video/logo.png" alt="Logo"></a>
+            <ul>
+                <li><a href="/index.html" class="active">home <span></span></a></li> 
+                <li><a href="/mamal pg/index.html">mammals<span></span></a></li>
+                <li><a href="/birds/bird.html">birds<span></span></a></li>
+                <li><a href="/reptile/reptile.html">Reptiles <span></span></a></li>
+                <li><a href="/login pg/login.html">login <span></span></a></li>
+                <!-- <li><a href="#">contact <span></span></a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact" class="contain_contact">
+            <form action="https://api.web3forms.com/submit" method="POST" class="left">
+                <div class="contact_heading">
+                    <h2>contact <span>us</span></h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="5597ac17-5526-4233-beeb-7cd3c08b0876">
+                <input type="text" name="name" placeholder="Your Name" class="contact_input" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact_input" required>
+                <textarea name="message" placeholder="Your Message" class="contact_input" required></textarea>
+                <button type="submit">submit <span><i class="fa-solid fa-check check"></i></span></button>
+            </form>
+            <div class="right">
+                <div class="image-cont">
+                    <div class="image">
+                        <img class="bg1 hero" src="video/b1.jpg">
+                        <img class="bg2 hero" src="video/b2.jpg">
+                        <img class="bg3 hero" src="video/b3.jpg">
+                    </div>
+                </div>
+                <div class="lala">
+                    <div class="info">  
+                        <h2><span><i class="fa-solid fa-location-dot"></i></span> Location</h2>
+                        <p>Al Ain , UAE</p>
+                    </div>
+                    <div class="mail info">
+                        <h2><span><i class="fa-solid fa-envelope"></i></span> E-mail</h2>
+                        <p>INFO@ALAINZOO.AE</p>
+                    </div>
+                    <div class="num info">
+                        <h2><span><i class="fa-solid fa-phone"></i></span> Phone Number</h2>
+                        <p>800 ZOO (966) Or +97137992000</p>
+                    </div>
+                    <div class="post info">
+                        <h2><span><i class="fa-solid fa-signs-post"></i></span> Postal Address</h2>
+                        <p>Al Ain Zoo PO BOX 1204</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
