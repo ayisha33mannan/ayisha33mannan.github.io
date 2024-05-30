@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3 {
+    font-family: 'Bubblegum Sans', cursive; 
+}
+p, span, a {
+    font-family: 'Open Sans', sans-serif; 
+}
+body{
+    margin: 0;
+    color: #000;
+    padding: 0;
+}
+html{
+    overflow-x: hidden;
+}
+/* ------------------------- header content (start)-----------------------------*/
+header {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute ;
+    top: 0;
+    left: 0;
+    z-index: -200;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+nav {
+    /* z-index: 9000; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+ul {
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    transition:  0.8s;
+
+}
+
+nav a:hover {
+    color: #BB661B;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #BB661B;
+    border-radius: 20px;
+    transform: scale(0) translateY(50px);
+    transition: 0.5s;
+}
+
+nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+nav .logo {
+    width: 80px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        left: -240px;
+    }
+
+    ul li {
+        display: block; /* Change to block to stack elements vertically */
+        margin-left: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add space between stacked elements */
+    }
+    nav .logo {
+        margin-left: 250px;
+    }
+}
+/* ------------------------- header content (end)-----------------------------*/
+/* ------------------------- main content (start)-----------------------------*/
+/* top history in detail ---start--- */
+.start{
+    padding: 5px 25px 3px 25px;
+    position: relative;
+    h1{
+        margin: 0.3em;
+        font-size: 3em;
+        text-align: center;
+        border-bottom: 3px solid  #BB661B; 
+        padding-bottom: 5px;
+        color: #BB661B;
+    }
+    h2{
+        padding-bottom: 8px;
+        font-size: 1.8em;
+        color: #d68f50;
+        -webkit-text-stroke: 0.3px #000;
+    }
+    p{
+        padding-left: 10px;
+        color: #F9E8D9;
+        filter: drop-shadow(10px 5px 15px  #000);
+    }
+    #manage{
+        border-bottom: 3px solid  #BB661B; 
+        padding-bottom: 10px;
+    }
+    
+}
+ /* parallax image --end--- */
+        /*color for p
+        color: #F9E8D9;
+        /* main heading color 
+        color: #BB661B; 
+        /* second most heading color 
+        color: #d68f50;
+        /* pointers or 3rd hading color  
+        color: #F7B787;*/
+.start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/bar_bg.jpg);
+    background-size: cover;
+    z-index: -1; /* Ensure the background is behind the content */
+}
+/* top history in detail ---end--- */
+
+/* timeline history ---start--- */
+.ground{
+    margin: -29px 0px 15px 0px;
+    background-image: url('images/bar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+.title{
+    text-align: center;
+    position: relative;
+    h1{
+    margin: 0.6em ;
+    font-size: 3em;
+    color: #3B5623;
+    }
+    p{
+    color: #F9E8D9;
+    filter: drop-shadow(10px 5px 8px  #000);
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    }
+}
+
+.timeline{
+    margin: 5em auto;
+    max-width: 34.15em;
+    h2{
+    margin-bottom: 0.5em; 
+    color: #d68f50;
+    -webkit-text-stroke: 0.3px #000;
+    }
+    p{
+    line-height: 27px;
+    color: #F9E8D9;    
+    filter: drop-shadow(10px 5px 17px  #000);
+    }
+}
+.checkpoint{
+    max-width: 34em;
+    padding: 0px 2em 2em 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+.checkpoint div{
+    border: 4px solid #3B5623;
+    border-radius: 1em;
+    padding: 1.5em;
+    background-image: url('images/bar_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 25px 25px 20px #000;
+}
+
+.checkpoint:nth-child(odd){
+    border-left: 4px solid #3B5623;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even){
+    border-right: 4px solid #3B5623;
+    padding-right: 3em;
+    transform: translateX(-16.9em);
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+    content: '';
+    background:  #3B5623;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 3px 4px 5px #000;
+}
+
+.checkpoint:nth-child(odd)::before {
+    left: 0;
+}
+
+.checkpoint:nth-child(even)::before {
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before{
+    content: '';
+    /* 0.5em */
+    background: #BB661B;
+    box-shadow: 2px 2px 5px #fff;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top:  50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before{
+    right: -0.5em;
+}
+
+/* Responsiv adjustments */
+@media screen and (max-width: 1150px){
+    .timeline{
+        width: 80vh;
+    }
+    .timeline .checkpoint{
+        widows: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .checkpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint div::before{
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* timeline history ---end--- */
