@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Section</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="/index.html" class="active">home <span></span></a></li> 
+            <li><a href="/mamal pg/index.html">mammals <span></span></a></li>
+            <li><a href="/birds/bird.html">birds <span></span></a></li>
+            <li><a href="/reptile/reptile.html">reptiles <span></span></a></li>
+            <li><a href="/login pg/login.html">login <span></span></a></li>
+            <li><a href="/contact us/contact.html">contact <span></span></a></li>
+        </ul>
+        </nav>
+        <img src="images/sand.jpg"  class="bg">
+    </header>
+
+    <main>
+        <section class="bar_bg">
+            <div class="box1"><i class="fa-regular fa-clock"></i>
+                <h3>OPENING HOURS</h3> <p><span>9 AM - 6 PM</span> Daily</p>
+            </div>
+            <div class="box3">
+                <i class="fa-solid fa-map-location-dot map"></i>
+                <h3>Map</h3> <p>Our Locattion</p>
+                <a href="https://www.google.com/maps/@24.1789257,55.7358385,14.32z?hl=en-US&entry=ttu"  target="_blank" >Find Us <i class="fa-solid fa-caret-right"></i></a>
+            </div>
+    </section>
+        <div class="title1">
+            <h1>BUY YOUR TICKETS</h1>
+            <h2>Unlock the gates to a wild adventure</h2>
+            <p>Get your tickets now and let the animal antics begin!</p>
+        </div>
+
+        <div class="adult-container">
+            <div class="adult-image"></div> <!-- for image -->
+            <div class="text-box">
+                <h1><span>Adult Tickets</span> AED 28.35</h1>
+                <p>Admission Ticket for Adult - more than 12 years old (valid for 3 days). (Price is tax inclusive)</p>
+                <div class="ticket-input">
+                    <button type="button" class="minus-btn" onclick="decreaseCount('adultTickets')">-</button>
+                    <input type="text" id="adultTickets" name="adultTickets" value="0" readonly>
+                    <button type="button" class="plus-btn" onclick="increaseCount('adultTickets')">+</button>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="child-container">
+            <div class="child-image"></div> <!-- for image -->
+            <div class="text-box">
+                <h1><span>Child Tickets</span> AED 9.45</h1>
+                <p>Child Admission Ticket for ages between 3 and 12 (valid for 3 days) ( Price is tax inclusive)</p>
+                <div class="ticket-input">
+                    <button type="button" class="minus-btn" onclick="decreaseCount('kidsTickets')">-</button>
+                    <input type="text" id="kidsTickets" name="kidsTickets" value="0" readonly>
+                    <button type="button" class="plus-btn" onclick="increaseCount('kidsTickets')">+</button>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="fam-container">
+            <div class="fam-image"></div> <!-- for image -->
+            <div class="text-box">
+                <h1><span>family Tickets</span> AED 998.99 AED</h1>
+                <p>AL AIN ZOO + WORLD DESERTS + SZDLC<br>
+                    FAMILY ANNUAL PASS BENEFITS <br>
+                    -15-20% ALL RETAIL AND F&B <br>
+                    -50% SAFARI TRUCK <br>
+                    -20% AL MAHA ROYAL TICKET <br>
+                    -30% SAFARI SUV <br>
+                    **TERMS & CONDITIONS APPLY</p>
+                <div class="ticket-input">
+                    <button type="button" class="minus-btn" onclick="decreaseCount('famTickets')">-</button>
+                    <input type="text" id="famTickets" name="famTickets" value="0" readonly>
+                    <button type="button" class="plus-btn" onclick="increaseCount('famTickets')">+</button>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="title2">
+            <h1>irresistible packages</h1>
+            <h2>Going wild is affordable now! </h2>
+        </div>
+
+        <div class="mahal-container">
+            <div class="mahal-image"></div> <!-- for image -->
+            <div class="text-box">
+                <h1><span>AL MAHA ROYAL</span> AED 2,625 </h1>
+                <p>UP TO 6 GUESTS <br>
+                    AL AIN ZOO + WORLD DESERTS + SZDLC + AL AIN SAFARI 
+                </p>
+                <div class="ticket-input">
+                    <button type="button" class="minus-btn" onclick="decreaseCount('mahalTickets')">-</button>
+                    <input type="text" id="mahalTickets" name="mahalTickets" value="0" readonly>
+                    <button type="button" class="plus-btn" onclick="increaseCount('mahalTickets')">+</button>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="annual-container">
+            <div class="annual-image"></div> <!-- for image -->
+            <div class="text-box">
+                <h1><span>ANNUAL PASS</span> AED 326.25 </h1>
+                <p>AL AIN ZOO + WORLD DESERTS + SZDLC <br>
+                    ANNUAL PASS BENEFITS <br>
+                    -15-20% ALL RETAIL AND F&B <br>
+                    -50% SAFARI TRUCK <br>
+                    -20% AL MAHA ROYAL TICKET <br>
+                    -30% SAFARI SUV <br>
+                    **TERMS & CONDITIONS APPLY</p>
+                <div class="ticket-input">
+                    <button type="button" class="minus-btn" onclick="decreaseCount('annualTickets')">-</button>
+                    <input type="text" id="annualTickets" name="annualTickets" value="0" readonly>
+                    <button type="button" class="plus-btn" onclick="increaseCount('annualTickets')">+</button>
+                    <button type="button" class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <section class="contain_contact">
+            <form action="https://api.web3forms.com/submit" method="POST" class="left">
+                <div class="contact_heading">
+                    <h2>contact <span>us</span></h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="5597ac17-5526-4233-beeb-7cd3c08b0876">
+                <input type="text" name="name" placeholder="Your Name" class="contact_input" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact_input" required>
+                <textarea name="message" placeholder="Your Message" class="contact_input" required></textarea>
+                <button type="submit">submit <span><i class="fa-solid fa-check check"></i></span></button>
+            </form>
+            <div class="right">
+                <div class="image-cont">
+                    <div class="image">
+                        <img class="bg1 hero" src="images/b1.jpg">
+                        <img class="bg2 hero" src="images/b2.jpg">
+                        <img class="bg3 hero" src="images/b3.jpg">
+                    </div>
+                </div>
+                <div class="lala">
+                    <div class="info">
+                        <h2><span><i class="fa-solid fa-location-dot"></i></span> Location</h2>
+                        <p>Al Ain , UAE</p>
+                    </div>
+                    <div class="mail info">
+                        <h2><span><i class="fa-solid fa-envelope"></i></span> E-mail</h2>
+                        <p>INFO@ALAINZOO.AE</p>
+                    </div>
+                    <div class="num info">
+                        <h2><span><i class="fa-solid fa-phone"></i></span> Phone Number</h2>
+                        <p>800 ZOO (966) Or +97137992000</p>
+                    </div>
+                    <div class="post info">
+                        <h2><span><i class="fa-solid fa-signs-post"></i></span> Postal Address</h2>
+                        <p>Al Ain Zoo PO BOX 1204</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer">
+        <div class="pogo">
+            <img src="images/logo.png" alt="Self Defense Club Logo">
+        </div>
+        <div class="contactt">
+            <h2>Quick MAp</h2>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5257.52681829517!2d55.73319558028216!3d24.173743903985077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab0c11e939f2b%3A0x93fd29c816885330!2sAl%20Ain%20Zoo!5e0!3m2!1sen!2sae!4v1716997634140!5m2!1sen!2sae" width="250" height="200"  style="border:0; border-radius: 30%; box-shadow: 10px 10px 10px #000;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="follow">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f effect"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram effect"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-x-twitter effect"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-youtube effect"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        Made by &copy; Ayisha Mannan &nbsp;&nbsp; <a href="https://alainzoo.ae/" target="_blank">original</a>
+    </footer>
+    <script>
+    function increaseCount(inputId) {
+         var input = document.getElementById(inputId);
+         var value = parseInt(input.value, 10);
+         value = isNaN(value) ? 0 : value;
+         value++;
+         input.value = value;
+    }
+    function decreaseCount(inputId) {
+        var input = document.getElementById(inputId);
+        var value = parseInt(input.value, 10);
+        value = isNaN(value) ? 0 : value;
+        if (values > 0) {
+            value--;
+            input.value = value;
+        }
+    }
+
+    // footer color changing background
+    // document.querySelector('.follow ul li:nth-child(1) a').addEventListener('mouseover', function() {
+    //     document.querySelector('.footer').style.backgroundColor = '#316FF6';
+    // });
+    
+    // document.querySelector('.follow ul li:nth-child(1) a').addEventListener('mouseout', function() {
+    //     document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    // });
+    
+    // document.querySelector('.follow ul li:nth-child(2) a').addEventListener('mouseover', function() {
+    //     document.querySelector('.footer').classList.add('gradient-bg');
+    // });
+    // document.querySelector('.follow ul li:nth-child(2) a').addEventListener('mouseout', function() {
+    //     document.querySelector('.footer').classList.remove('gradient-bg');
+    //     document.querySelector('.footer').style.backgroundColor = '#b0865f'; 
+    // });
+    
+    // document.querySelector('.follow ul li:nth-child(3) a').addEventListener('mouseover', function() {
+    //     document.querySelector('.footer').style.backgroundColor = '#fff';
+    // });
+    // document.querySelector('.follow ul li:nth-child(3) a').addEventListener('mouseout', function() {
+    //     document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    // });
+    
+    // document.querySelector('.follow ul li:nth-child(4) a').addEventListener('mouseover', function() {
+    //     document.querySelector('.footer').style.backgroundColor = '#E62117';
+    // });
+    // document.querySelector('.follow ul li:nth-child(4) a').addEventListener('mouseout', function() {
+    //     document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    // });
+    </script>
+</body>
+</html>

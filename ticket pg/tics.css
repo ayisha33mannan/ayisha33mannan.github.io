@@ -1,0 +1,734 @@
+h1, h2, h3 {
+    font-family: 'Bubblegum Sans', cursive; 
+}
+
+p, span, a {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+html{
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #F9E8D9;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+ul {
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    transition:  0.8s;
+
+}
+
+nav a:hover {
+    color: #BB661B;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #BB661B;
+    border-radius: 20px;
+    transform: scale(0) translateY(50px);
+    transition: 0.5s;
+}
+
+nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+nav .logo {
+    width: 80px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        left: -240px;
+    }
+
+    ul li {
+        display: block; /* Change to block to stack elements vertically */
+        margin-left: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add space between stacked elements */
+    }
+    nav .logo {
+        margin-left: 250px;
+    }
+}
+
+/* ------------------------- header content (start)-----------------------------*/
+header {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* --------------------------- header content (end)-----------------------------*/
+
+ /*---------------------------- main content (start)--------------------------  */
+ /* Time Ticket Map  */
+ /* starting */
+.bar_bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/bar_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 220px;
+}
+.box1{
+    width: 450px;
+    height: 185px;
+    background: #F9E8D9;
+    box-shadow:  -15px 15px 30px  #000;
+    background-color: #d68f50bc;
+    p{
+        text-align: center;
+        padding: 5px;
+        font-weight: 300;
+        color: #F9E8D9;
+        span{
+            font-weight: 900;
+            font-size: 18px;
+        }
+    }
+    h3{
+        font-size:20px ;
+        text-align: center;
+        margin-top: -20px;
+        color: #BB661B;
+        text-shadow: rgba(255, 255, 255, 0.379) 0px 2px ;
+    }
+    .fa-clock{
+        font-size: 70px;
+        padding: 10px 10px;
+        border-radius: 50% ;
+        margin-left: 170px;
+        color: #000;
+        background:  #F9E8D9;
+        position: relative;
+        bottom: 30px;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+        margin-left: 130px;
+        position: relative;
+        top: -10px;
+        color: #3B5623;
+    }
+}
+
+.box3{
+    width: 250px;
+    height: 185px;
+    background: #F9E8D9;
+    box-shadow:  15px 15px 30px  #000;
+    background-color: #d68f50bc;
+
+    p{
+        text-align: center;
+        padding: 5px;
+        font-weight: 600;
+        color: #F9E8D9;
+    }
+    h3{
+        font-size:20px ;
+        text-align: center;
+        margin-top: -20px;
+        color: #BB661B;
+        text-shadow: rgba(255, 255, 255, 0.379) 0px 2px ;
+    }
+    .map{
+        font-size: 70px;
+        padding: 10px 10px;
+        border-radius: 50% ;
+        color: #000;
+        background:  #F9E8D9;
+        margin-left: 78px;
+        position: relative;
+        bottom: 30px;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+        margin-left: 90px;
+        position: relative;
+        top: -8px;
+        color: #3B5623;
+    }
+}
+.box1 a:hover ,
+.box2 a:hover,
+.box3 a:hover{
+    font-weight: 600;
+    color: #224800;
+}
+ /* Time Ticket Map  (ending) */
+ /*---------------------------- main tickets section (start)--------------------------  */
+.title1{
+    /* margin-top: 20px; */
+    text-align: center;
+    padding: 5px 0px;
+    background: url(images/bg.jpg);
+    h1{
+        font-size: 3.9rem;
+        /* color: rgb(158, 0, 0); */
+        color: #3B5623;
+
+    }
+    h2{
+        margin-top: -40px;     
+        font-size: 1.8rem;
+        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
+        color: #f7f7f6;
+    }
+    p{
+        margin-top: -15px;
+        font-size: 1.3rem;
+        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
+        color: #f7f7f6;
+    }
+}
+
+/* .....adult ticket -- start..... */
+.adult-container {
+    display: flex;
+    margin-top: 1%;
+    margin-right: 40px ;
+    margin-bottom: 25px;
+    transition: transform 0.3s; 
+}
+
+.adult-image {
+    width: 250px;
+    height: 250px;
+    margin-left: 8%;
+    border-radius: 49% 51% 50% 50% / 0% 100% 0% 100% ;
+    background-color: #BB661B;
+    background-image: url(images/adult.jpg);
+    background-size: cover;
+    background-position: center 36%;
+    background-repeat: no-repeat;
+}
+/* .....adult ticket -- end..... */
+
+/* .....child ticket -- start..... */
+.child-container {
+    display: flex;
+    margin-top:-25px;
+    margin-right: 40px ;
+    margin-bottom: 25px;
+    transition: transform 0.3s; 
+}
+
+.child-image {
+    width: 250px;
+    height: 250px;
+    margin-left: 8%;
+    border-radius: 100% 0% 100% 0% / 50% 50% 51% 49% ;
+    background-color: #BB661B;
+    background-image: url(images/child.jpg);
+    background-size: cover;
+    background-position: center 36%;
+    background-repeat: no-repeat;
+}
+/* ------child ticket -- end------- */
+
+/* .....family ticket -- start..... */
+.fam-container {
+    display: flex;
+    margin-top:-25px;
+    margin-right: 40px ;
+    margin-bottom: 25px;
+    transition: transform 0.3s; 
+}
+
+.fam-image {
+    width: 250px;
+    height: 250px;
+    margin-left: 97px;
+    border-radius: 49% 51% 50% 50% / 0% 100% 0% 100% ;
+    background-color: #BB661B;
+    background-image: url(images/fam.jpg);
+    background-size: cover;
+    background-position: center 70%;
+    background-repeat: no-repeat;
+}
+/* ------fam ticket -- end------- */
+
+/* ------ticket description--start----- */
+.text-box {
+    flex: 1;
+    /* border-bottom: 1px solid #f30000;  */
+    padding: 7px; 
+    h1{
+        text-align: left;
+        color: #BB661B;
+        text-decoration: none;;
+        span{
+            color: #000;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    }
+    p{
+        margin-left: 2%;
+    }
+}
+/* ------ticket description---start---- */
+ /*---------------------------- main tickets section (ended)--------------------------  */
+
+ /*---------------------------- packages section (started)--------------------------  */
+.title2{
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px 0px;
+    background:url(images/bg.jpg);
+    text-transform: uppercase;
+    h1{
+        font-size: 3.4rem;
+        /* color: rgb(158, 0, 0); */
+        color: #3B5623;
+    }
+    h2{
+        margin-top: -30px;     
+        font-size: 1.5rem;
+        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
+        color: #f7f7f6;
+    }
+}
+
+/* .....AL MAHA ROYAL ticket -- start..... */
+.mahal-container {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 40px ;
+    margin-bottom: 25px;
+    transition: transform 0.3s; 
+}
+
+.mahal-image {
+    width: 250px;
+    height: 250px;
+    margin-left: 97px;
+    border-radius: 50% ;
+    background-color: #BB661B;
+    background-image: url(images/mahal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* ------AL MAHA ROYAL -- end------- */
+
+/* .....AL MAHA ROYAL ticket -- start..... */
+.annual-container {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 40px ;
+    margin-bottom: 25px;
+    transition: transform 0.3s; 
+}
+
+.annual-image {
+    width: 250px;
+    height: 250px;
+    margin-left: 97px;
+    border-radius: 50% ;
+    background-color: #c0a221;
+    background-image: url(images/annual.png);
+    background-size: cover;
+    background-position: center 36%;
+    background-repeat: no-repeat;
+}
+/* ------AL MAHA ROYAL -- end------- */
+
+/* ---hover styling effect---- */
+.adult-container:hover,
+.child-container:hover,
+.fam-container:hover,
+.mahal-container:hover,
+.annual-container:hover{
+    transform: scale(1.05); 
+}
+
+/*------------------ packages section (ended)-------------------  */
+
+/* -----buttons styling---start---- */
+.ticket-input {
+    margin-left: 15%;
+    margin-top: 4%;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #BB661B ;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #89AA4F;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20PX;
+    
+    transition: background-color 1s;
+    transition:  0.8s ease-in-out ;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #759144;
+    padding: 13px 35px;box-shadow: 10px 5px 20px  #000 ;
+}
+
+/* -----buttons styling -------- end-----*/
+/* contact us page ----start----- */
+.contain_contact{
+    width: 100%;
+    height: 620px;
+    display: flex;
+    background: url(images/bg.jpg);
+    align-items: center;
+    justify-content: space-evenly;
+}
+.left{
+    width: 50%;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    transition: background 0.3s ease-in-out, backdrop-filter 0.1s ease-in-out, -webkit-backdrop-filter 0.1s ease-in-out, border-radius 0.1s ease-in-out, border 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.contact_heading {
+    h2{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 40px;
+        margin-top: 100px;
+        color: #759144;
+        span{
+            color: #3B5623;
+            -webkit-text-stroke: 0.5px #000;
+        }
+    }
+    hr{
+        border: none;
+        background-color: #d68f50;
+        width: 170px;
+        height: 5px;
+        border-radius: 10px;
+        margin-bottom: 20px ;
+    }
+}
+.contact_input{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+input[name="name"]{
+    width: 415px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: -20px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+    text-indent: -300px; 
+    font-size: 14px;
+}
+.left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+
+}
+.contact_input:focus{
+    border: 3px solid #d68f50;
+}
+.contact_input::placeholder{
+    color: #98897d;
+}
+.left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #89AA4F ;
+    
+}
+.left button:hover{
+    background-color: #759144;
+    box-shadow: 8px 0px 15px #000;
+}
+.right{
+    width: 50%;
+    position: relative;
+}
+.image-cont{
+    margin-left: 100px;
+}
+.image{
+    position: relative;
+    margin-top: -200px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    .bg1{
+        width: 70% ;
+        height: 360px;
+        position: absolute;
+        object-fit: contain;
+    }
+    .bg2{
+        width: 40%;
+        height: 200px;
+        top: 220px;
+        object-fit: cover;
+        position: absolute;
+        left: -60px;
+        bottom: 20px;
+        border-radius: 20px;
+    }
+    .bg3{
+        width: 40%;
+        height: 200px;
+        top: -30px;
+        left: 250px;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 20px;
+    }
+}
+
+.lala {
+    height: 620px;
+    position: absolute;
+    top: 0;
+    margin-left: 40%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    .info{
+        padding-bottom: -10px;
+        h2{
+            font-size: 40px;
+            color: #759144;
+            -webkit-text-stroke: 0.5px #000;
+            span{
+                -webkit-text-stroke: 0px #000;
+                color: #dddddd;
+            }
+        }
+        p{
+            font-size: 20px;
+            font-weight: 600;
+            padding: -1px 51px;
+            /* color: #000; */
+        }
+    }
+}
+
+.left:hover{
+    background: url(images/bg.jpg);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    .contact_input{box-shadow: 10px 10px 15px #000;}
+}
+
+.left:hover + .right .image {
+    opacity: 1;
+
+}
+
+.left:hover + .right .lala {
+    opacity: 0;
+}
+/* Responsive adjustments */
+/* small */
+@media (max-width: 768px){
+    .left{
+        margin-left: -10px;
+    }}
+/*---------------------------- main content (end)--------------------------  */
+/* ------------------footer start--------- */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b0865f;
+    color: #fff;
+    padding: 20px;
+    height: 250px;
+}
+.footer .pogo img {
+    height: 220px;
+}
+.footer .contactt,
+.footer .follow {
+    text-align: center;
+}
+.footer .follow h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+.footer .contactt p,
+.footer .follow p {
+    font-weight: 300;
+    margin: 5px 0;
+}
+.footer .pogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .contactt h2 {
+    font-weight: 700;
+    color: #000;
+}
+.footer .follow h2 {
+    border-bottom: 3px solid #3B5623;
+    display: inline-block;
+}
+.follow ul {
+    display: flex;
+    align-items: center;
+
+    margin-left: 4%;
+}
+.follow ul li {
+    list-style: none;
+    a{
+        font-size: 30px;
+        margin-left: -50px;
+    }
+}
+.follow ul li:nth-child(1) a {
+    color: #316FF6;    
+
+}
+.follow ul li:nth-child(2) a {
+    background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.follow ul li:nth-child(3) a {
+    color: #000;
+}
+.follow ul li:nth-child(4) a {
+    color: #E62117;
+}
+.follow ul li:nth-child(1) a:hover,
+.follow ul li:nth-child(2) a:hover,
+.follow ul li:nth-child(4) a:hover {
+    color: #fff;
+}
+
+
+.gradient-bg {
+    background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3) !important;
+}
+footer{
+    text-align: center;
+    background-color: #BB661B;
+    a{
+        color: darkgreen;
+        font-weight: 600;
+    }
+    a:hover{
+        color: #759144;
+    }
+}
+/* ------------------footer end--------- */
