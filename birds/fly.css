@@ -3,20 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* fonts  */
 h1, h2, h3 {
     font-family: 'Bubblegum Sans', cursive; 
 }
 p, span, a {
     font-family: 'Open Sans', sans-serif; 
 }
+/* css start */
 main{
     overflow-x: hidden;
 }
 body{
     background:  #422A12;
+    font-family: 'Lato', sans-serif;
+
 }
-/* nav bar + starting page */
-/* start */
+/* header start */
+
 header{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
@@ -86,6 +90,7 @@ nav .logo{
     margin-top: -15px;
     cursor: pointer;
 }
+
 /* nav bar ending */
 
 /* video part starting */
@@ -206,7 +211,9 @@ nav .logo{
     }
 }
  /* the heading of the video (start) ending*/
- /* table below the header (mammal)---start--- */
+
+ /* ---------------------main start------------- */
+  /* table below the header ---start--- */
 .table{
     position: relative;
     background-color:#422A12;
@@ -216,12 +223,10 @@ nav .logo{
     margin-right: 20px;
     padding-bottom: 15px;
     h1{
-        /* main heading color */
         color: #BB661B; 
         font-size: 70px;
     }
     h2{
-        /* second most heading color */
         color: #d68f50;
         padding: 0px 10px 10px 0px;
     }
@@ -238,7 +243,6 @@ nav .logo{
     margin-left: 20px;
     h3{
         margin-left: -3px;
-        /* pointers or 3rd hading color  */
         color: #F7B787;
         font-size: 23px;
     }
@@ -263,7 +267,7 @@ nav .logo{
     flex-basis: 45%;
     margin-bottom: 20px;
 }
-/* table below the header (mammal)---end--- */
+/* table below the header ---end--- */
 
 /* parallax image --start--- */
 .picture{
@@ -292,15 +296,6 @@ nav .logo{
             color:#BB661B;
         }
     }
-    /* parallax image --end--- */
-        /*color for p
-        color: #F9E8D9;
-        /* main heading color 
-        color: #BB661B; 
-        /* second most heading color 
-        color: #d68f50;
-        /* pointers or 3rd hading color  
-        color: #F7B787;*/
     p{
         text-align: center;
         font-size: 20px;
@@ -329,7 +324,7 @@ nav .logo{
     padding: 20px 0px;
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 42%;
     top: 0;
     color: #BB661B;
 }
@@ -425,3 +420,95 @@ nav .logo{
     text-decoration: none;
 }
 /* animals ----------ending------ */
+/* ------------------footer start--------- */
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b0865f;
+    color: #fff;
+    padding: 20px;
+    height: 250px;
+}
+.footer .pogo img {
+    height: 220px;
+}
+.footer .contactt,
+.footer .follow {
+    text-align: center;
+}
+.footer .follow h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+.footer .contactt p,
+.footer .follow p {
+    font-weight: 300;
+    margin: 5px 0;
+}
+.footer .pogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .contactt h2 {
+    font-weight: 700;
+    color: #000;
+}
+.footer .follow h2 {
+    border-bottom: 3px solid #3B5623;
+    display: inline-block;
+}
+.follow ul {
+    display: flex;
+    align-items: center;
+
+    margin-left: 4%;
+}
+.follow ul li {
+    list-style: none;
+    a{
+        font-size: 30px;
+        margin-left: 20px;
+    }
+}
+.follow ul li:nth-child(1) a {
+    color: #316FF6;    
+
+}
+.follow ul li:nth-child(2) a {
+    background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.follow ul li:nth-child(3) a {
+    color: #000;
+}
+.follow ul li:nth-child(4) a {
+    color: #E62117;
+}
+.follow ul li:nth-child(1) a:hover,
+.follow ul li:nth-child(2) a:hover,
+.follow ul li:nth-child(4) a:hover {
+    color: #fff;
+}
+
+
+.gradient-bg {
+    background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3) !important;
+}
+footer{
+    text-align: center;
+    background-color: #BB661B;
+    a{
+        color: darkgreen;
+        font-weight: 600;
+    }
+    a:hover{
+        color: #759144;
+    }
+}
+/* ------------------footer end--------- */

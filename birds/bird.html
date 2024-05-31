@@ -8,31 +8,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="fly.css">
 </head>
 <body>
+    <!-- header  -->
     <header>
+        <!-- video -->
         <div class="start">
             <video autoplay loop muted plays-inline class="video">
                 <source src="images/video.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
+            <!-- nav start -->
             <nav>
                 <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
                 <ul>
-                    <li><a href="/index.html" class="active">home <span></span></a></li> 
+                    <li><a href="/index.html" class="active">home <span></span></a></li>
                     <li><a href="/mamal pg/index.html">Mammals <span></span></a></li>
                     <li><a href="/reptile/reptile.html">Reptiles <span></span></a></li>
                     <li><a href="/login pg/login.html">login <span></span></a></li>
                     <li><a href="/contact us/contact.html">contact <span></span></a></li>
                 </ul>
             </nav>
+            <!-- nav end -->
+            <!-- heading parallax -->
             <div class="heading">
-                <h1 id="title">BIRDS <br>Al Ain Zoo</h1>    
-            </div>   
+                <h1 id="title">BIRDS <br>Al Ain Zoo</h1>
+            </div>
         </div>
     </header>
+    <!-- header end -->
+    <!-- main start -->
     <main>
+        <!-- info abt the animal -->
         <section class="yes">
             <div  class="table">
                 <div class="table-header">
@@ -56,20 +65,23 @@
                 </div>
             </div>
         </section>
+        <!-- parallax image -->
         <section>
             <div class="picture">
                 <div class="inside">
                 </div>
             </div>
-            <div class="wild"> 
+            <!-- text area -->
+            <div class="wild">
                 <h2>Get ready for a <span>WILD</span> visit!</h2>
                 <p>Animals play an important role in our lives. As humans, we have a responsibility to treat these animals with respect and care. <br>We are the most visited zoo in the UAE, dedicated to conservation and education, with a mission to prevent extinction.</p>
                 <p id="space"> <br>Here are some of the animals you will meet during your journey to the Ain Zoo, home to over <span>10,000</span> animals representing <span>600</span> species.</p>
             </div>
         </section>
+        <!-- animals to choose  -->
         <section>
             <div class="animal_st">
-                <h2>Our Animals</h2>    
+                <h2>Our Animals</h2>
                 <div class="circles">
                   <div class="circle-container">
                     <div class="bird circle" onmouseover="playSound('Kookaburra')"></div>
@@ -100,8 +112,37 @@
               </div>
         </section>
     </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <div class="footer">
+        <div class="pogo">
+            <img src="images/logo.png" alt="Self Defense Club Logo">
+        </div>
+        <div class="contactt">
+            <h2>Quick Map</h2>
+            <!-- quick map -->
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5257.52681829517!2d55.73319558028216!3d24.173743903985077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab0c11e939f2b%3A0x93fd29c816885330!2sAl%20Ain%20Zoo!5e0!3m2!1sen!2sae!4v1716997634140!5m2!1sen!2sae" width="250" height="200"  style="border:0; border-radius: 30%; box-shadow: 10px 10px 10px #000;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="follow">
+            <h2>Follow Us</h2>
+            <ul>
+                <!-- social links -->
+                <li><a href="https://www.facebook.com/AlAinZooUAE/" target="_blank"><i class="fa-brands fa-facebook-f effect"></i></a></li>
+                <li><a href="https://www.instagram.com/alainzoouae/" target="_blank"><i class="fa-brands fa-instagram effect"></i></a></li>
+                <li><a href="https://x.com/alainzoouae?lang=en" target="_blank"><i class="fa-brands fa-x-twitter effect"></i></a></li>
+                <li><a href="https://www.youtube.com/@AlAinZooUAE" target="_blank"><i class="fa-brands fa-youtube effect"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- credit, original website -->
+    <footer>
+        Made by &copy; Ayisha Mannan &nbsp;&nbsp; <a href="https://alainzoo.ae/" target="_blank">original</a>
+    </footer>
+
+    <!-- javascript -->
     <script>
-        // hover sound effect 
+        // hover sound effect
         var soundKookaburra = document.getElementById("sound-Kookaburra");
         var soundEagle = document.getElementById("sound-Eagle");
         var soundOwl = document.getElementById("sound-Owl");
@@ -117,16 +158,47 @@
             }
 
             if (sound) {
-                sound.currentTime = 0; 
+                sound.currentTime = 0;
                 sound.play();
-                setTimeout(stopSound, 9000, sound); 
+                setTimeout(stopSound, 9000, sound);
             }
         }
 
         function stopSound(sound) {
             sound.pause();
-            sound.currentTime = 0; 
+            sound.currentTime = 0;
         }
+
+        // footer color changing background
+    document.querySelector('.follow ul li:nth-child(1) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').style.backgroundColor = '#316FF6';
+    });
+
+    document.querySelector('.follow ul li:nth-child(1) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
+
+    document.querySelector('.follow ul li:nth-child(2) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').classList.add('gradient-bg');
+    });
+    document.querySelector('.follow ul li:nth-child(2) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').classList.remove('gradient-bg');
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
+
+    document.querySelector('.follow ul li:nth-child(3) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').style.backgroundColor = '#fff';
+    });
+    document.querySelector('.follow ul li:nth-child(3) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
+
+    document.querySelector('.follow ul li:nth-child(4) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').style.backgroundColor = '#E62117';
+    });
+    document.querySelector('.follow ul li:nth-child(4) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
     </script>
 </body>
 </html>
