@@ -1,3 +1,4 @@
+/* fonts */
 h1, h2, h3 {
     font-family: 'Bubblegum Sans', cursive; 
 }
@@ -5,7 +6,7 @@ h1, h2, h3 {
 p, span, a {
     font-family: 'Open Sans', sans-serif; 
 }
-
+/* -----------------------css-------------------- */
 html{
     overflow-x: hidden;
 }
@@ -13,8 +14,10 @@ body {
     margin: 0;
     padding: 0;
     background: #F9E8D9;
+    font-family: 'Lato', sans-serif;
 }
-
+/* ------------------------- header content (start)-----------------------------*/
+/* ----------nav bar start--------------- */
 nav {
     width: 100%;
     position: absolute;
@@ -86,16 +89,15 @@ nav .logo {
     }
 
     ul li {
-        display: block; /* Change to block to stack elements vertically */
-        margin-left: 0; /* Remove margin */
-        margin-bottom: 10px; /* Add space between stacked elements */
+        display: block; 
+        margin-left: 0; 
+        margin-bottom: 10px; 
     }
     nav .logo {
         margin-left: 250px;
     }
 }
-
-/* ------------------------- header content (start)-----------------------------*/
+/* ------------nav bar end--------- */
 header {
     height: 50vh;
     width: 100%;
@@ -112,8 +114,31 @@ header {
     left: 0;
     z-index: -1;
 }
-/* --------------------------- header content (end)-----------------------------*/
 
+.title1{
+    text-align: center;
+    padding: 5px 0px;
+    background: url(images/bg.jpg);
+    h1{
+        font-size: 3.9rem;
+        /* color: rgb(158, 0, 0); */
+        color: #3B5623;
+
+    }
+    h2{
+        margin-top: -40px;     
+        font-size: 1.8rem;
+        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
+        color: #f7f7f6;
+    }
+    p{
+        margin-top: -15px;
+        font-size: 1.3rem;
+        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
+        color: #f7f7f6;
+    }
+}
+/* --------------------------- header content (end)-----------------------------*/
  /*---------------------------- main content (start)--------------------------  */
  /* Time Ticket Map  */
  /* starting */
@@ -217,30 +242,7 @@ header {
 }
  /* Time Ticket Map  (ending) */
  /*---------------------------- main tickets section (start)--------------------------  */
-.title1{
-    /* margin-top: 20px; */
-    text-align: center;
-    padding: 5px 0px;
-    background: url(images/bg.jpg);
-    h1{
-        font-size: 3.9rem;
-        /* color: rgb(158, 0, 0); */
-        color: #3B5623;
 
-    }
-    h2{
-        margin-top: -40px;     
-        font-size: 1.8rem;
-        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
-        color: #f7f7f6;
-    }
-    p{
-        margin-top: -15px;
-        font-size: 1.3rem;
-        filter: drop-shadow(10px 5px 8px   rgba(0, 0, 0, 0.6));
-        color: #f7f7f6;
-    }
-}
 
 /* .....adult ticket -- start..... */
 .adult-container {
@@ -454,6 +456,7 @@ input[type="text"] {
 }
 
 /* -----buttons styling -------- end-----*/
+
 /* contact us page ----start----- */
 .contain_contact{
     width: 100%;
