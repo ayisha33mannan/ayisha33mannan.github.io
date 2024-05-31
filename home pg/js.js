@@ -1,3 +1,5 @@
+
+// the on scroll gsap animation 
 gsap.registerPlugin(ScrollTrigger);
  gsap.from('.loin', { 
     duration: 1, 

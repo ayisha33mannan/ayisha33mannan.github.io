@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* fonts */
 h1, h2, h3 {
     font-family: 'Bubblegum Sans', cursive;
 }
@@ -10,7 +11,7 @@ h1, h2, h3 {
 p, span, a {
     font-family: 'Open Sans', sans-serif;
 }
-
+/* css */
 html{
     overflow-x: hidden;
 }
@@ -20,7 +21,7 @@ body{
      font-family: 'Lato', sans-serif;
 
 }
-/* nav bar + starting page */
+/* header start */
 /* start */
 header{
     height: 100vh;
@@ -926,103 +927,3 @@ footer{
     }
 }
 /* ------------------footer end--------- */
-/* 
-.mediaa{
-    position: absolute;
-    bottom: -270.5%;
-    left: 83.4%; 
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    z-index: 10;
-}
-.mediaa .linkk{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    line-height: 50px;
-    text-align: center;
-    color: #fff;
-    background-color: #759144;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0 0 0 2px #3B5623;
-}
-.mediaa ul{
-    position: absolute;
-    top: -50px;
-    left:-50px ;
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    height: 150px;
-    background: #dbdbdb;
-    border-radius: 50%;
-    transition: .5s;
-    transform: scale(0.3) rotate(-180deg);
-    box-shadow: 0 0 0 2px #3B5623, 0 0 0 4px #fff ;
-    transition: 1s;
-    z-index: -1;
-    li{
-        position: absolute;
-        list-style: none;
-    }
-}
-.mediaa:hover ul{
-    transform: scale(1) rotate(0deg);
-
-}
-.mediaa ul li:nth-child(1){
-    left: 50%;
-    top: 15px;
-    transform: translateX(-50%);
-
-}
-.mediaa ul li:nth-child(2){
-    left: 50%;
-    bottom: 15px;
-    transform: translateX(-50%);
-
-}
-.mediaa ul li:nth-child(3){
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-
-}
-.mediaa ul li:nth-child(4){
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-
-}
-.mediaa ul li a .effect{
-    color: crimson;
-    transition: .5s;
-}
-.mediaa ul li:hover a .effect{
-    transform: scale(1.5);
-    color: darkgreen;
-}
-.mediaa ul::before{
-    content: '' ;
-    position: absolute;
-    top:calc(50% - 1px) ;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #3B5623;
-    transform: rotate(45deg) ;
-
-}
-.mediaa ul::after{
-    content: '' ;
-    position: absolute;
-    top:calc(50% - 1px) ;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #3B5623;
-    transform: rotate(-45deg) ;
-
-} */
