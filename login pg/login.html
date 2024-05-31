@@ -15,22 +15,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- header start-->
     <header>
+        <!-- nav start -->
         <nav>
+            <!-- logo -->
             <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
             <ul>
-                <li><a href="/index.html" class="active">home <span></span></a></li> 
+                <li><a href="/index.html" class="active">home <span></span></a></li>
                 <li><a href="/mamal pg/index.html">Mammals <span></span></a></li>
                 <li><a href="/birds/bird.html">birds <span></span></a></li>
                 <li><a href="/reptile/reptile.html">Reptiles <span></span></a></li>
                 <li><a href="/contact us/contact.html">contact <span></span></a></li>
             </ul>
         </nav>
+        <!-- nav end -->
     </header>
+    <!-- header end -->
+    <!-- main end -->
     <main>
+        <!-- the box with the login inputs and with the hover effect -->
         <div class="page" onmouseover="changeBgImage(true)" onmouseout="changeBgImage(false)">
             <form action="">
                 <h2>Login</h2>
+                <!-- login inputs -->
                 <div class="input">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" placeholder="Username" required>
@@ -46,6 +54,7 @@
                 <div class="register">
                     <p>Don't have an account?<a href="#"> Sign Up</a></p>
                 </div>
+                <!-- social links -->
                 <div class="media">
                     <p>Or sign in with</p>
                     <div class="media-icon">
@@ -57,14 +66,17 @@
             </form>
         </div>
     </main>
-    
+    <!-- main end -->
+
+    <!-- javascript -->
     <script>
+        // hover effect for image change
         function changeBgImage(isHover) {
             const body = document.body;
             if (isHover) {
-                body.style.backgroundImage = "url('images/bday.png')"; /* Background image on hover */ //jab hover
+                body.style.backgroundImage = "url('images/bday.png')"; /* Background image on hover */ 
             } else {
-                body.style.backgroundImage = "url('images/bnight.png')"; /* Default background image */ //last mai dubara wohi
+                body.style.backgroundImage = "url('images/bnight.png')"; /* Default background image */
             }
         }
 

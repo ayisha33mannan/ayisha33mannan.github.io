@@ -3,16 +3,19 @@
     box-sizing: border-box;
     padding: 0;
 }
+/* font */
 h1, h2, h3 {
     font-family: 'Bubblegum Sans', cursive; 
 }
 p, span, a {
     font-family: 'Open Sans', sans-serif; 
 }
+/* css start */
 html{
     overflow-x: hidden;
 }
 body{
+    font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +79,9 @@ nav .logo{
     cursor: pointer;
 }
 /* nav bar ending */
+
+/* ----------------main start-------------------------- */
+/*the box with the login inputs and with the hover effect */
 .page{
     position: relative;
     display: flex;
@@ -203,3 +209,5 @@ button:hover{
         color: rgba(255, 255, 255);
     }
 }
+
+/* ----------------------main end-------------------------- */
