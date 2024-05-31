@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* fonts */
 h1, h2, h3 {
     font-family: 'Bubblegum Sans', cursive; 
 }
@@ -10,11 +11,14 @@ h1, h2, h3 {
 p, span, a {
     font-family: 'Open Sans', sans-serif; 
 }
+/* start css */
 main{
     overflow-x: hidden;
 }
 body{
     background:  #00334e;
+    font-family: 'Lato', sans-serif;
+
 }
 /* nav bar + starting page */
 /* start */
@@ -208,12 +212,10 @@ nav .logo{
     margin-right: 20px;
     padding-bottom: 15px;
     h1{
-        /* main heading color */
         color: #BB661B; 
         font-size: 70px;
     }
     h2{
-        /* second most heading color */
         color: #d68f50;
         padding: 0px 10px 10px 0px;
     }
@@ -230,7 +232,6 @@ nav .logo{
     margin-left: 20px;
     h3{
         margin-left: -3px;
-        /* pointers or 3rd hading color  */
         color: #F7B787;
         font-size: 23px;
     }
@@ -308,7 +309,7 @@ nav .logo{
     padding: 20px 0px;
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 42%;
     top: 0;
     color: #BB661B;
 }
@@ -404,8 +405,10 @@ nav .logo{
     text-decoration: none;
 }
 /* animals ----------ending------ */
+
 /* ------------------footer start--------- */
 .footer {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -413,7 +416,6 @@ nav .logo{
     color: #fff;
     padding: 20px;
     height: 250px;
-    z-index: 100;
 }
 .footer .pogo img {
     height: 220px;
@@ -448,19 +450,18 @@ nav .logo{
 .follow ul {
     display: flex;
     align-items: center;
-    z-index: 900;
+
     margin-left: 4%;
 }
 .follow ul li {
     list-style: none;
     a{
         font-size: 30px;
-        margin-left: -50px;
-        z-index: 900;
+        margin-left: 20px;
     }
 }
 .follow ul li:nth-child(1) a {
-    color: #316FF6;     z-index: 900;
+    color: #316FF6;    
 
 }
 .follow ul li:nth-child(2) a {
