@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         *{
             margin: 0;
@@ -15,6 +16,7 @@
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
+        /* font */
         h1, h2, h3 {
             font-family: 'Bubblegum Sans', cursive; 
         }
@@ -27,7 +29,10 @@
         body{
             min-height: 100vh;
             background-color: #003329;
+            font-family: 'Lato', sans-serif;
+
         }
+        /* header start */
         header {
             height: 60vh;
             width: 100%;
@@ -103,6 +108,7 @@
             margin-left: -71px;
             cursor: pointer;
         }
+        /* responsive */
         @media (max-width: 768px) {
             nav {
                 padding: 20px 5%;
@@ -126,7 +132,8 @@
             }
             h2{
                 font-size: 25px;
-                color: #d68f50;            }
+                color: #d68f50;            
+            }
             hr{
                 margin: 7px 0px;
                 border: none; 
@@ -135,6 +142,8 @@
                 padding: 0;
             }
         }
+        /* header end */
+        /* info abt the animal */
         .table-info{
             color: #F9E8D9;
             display: flex;
@@ -254,7 +263,6 @@
                 border-bottom: 2px solid #BB661B; 
                 padding-bottom: 5px;
             }
-            /* h3 wasn't working */
             h4{
                 font-size: 17px;
                 padding: 2px 0px 2px 10px;
@@ -414,11 +422,111 @@
             }
         }
         /* gallery ----------end--------- */
+        /* ------------------footer start--------- */
+        .footer {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #b0865f;
+            color: #fff;
+            padding: 20px;
+            height: 250px;
+        }
+        .footer .pogo img {
+            height: 220px;
+        }
+        .footer .contactt,
+        .footer .follow {
+            text-align: center;
+        }
+        .footer .follow h2 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        .footer .contactt p,
+        .footer .follow p {
+            font-weight: 300;
+            margin: 5px 0;
+        }
+        .footer .pogo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer .contactt h2 {
+            font-weight: 700;
+            color: #000;
+        }
+        .footer .follow h2 {
+            border-bottom: 3px solid #3B5623;
+            display: inline-block;
+        }
+        .follow ul {
+            display: flex;
+            align-items: center;
+            margin-left: 4%;
+        }
+        .follow ul li {
+            list-style: none;
+            a{
+                font-size: 30px;
+                margin-left: -50px;
+            }
+        }
+        .follow ul li:nth-child(1) a {
+            color: #316FF6;    
+        }
+        .follow ul li:nth-child(2) a {
+            background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .follow ul li:nth-child(3) a {
+            color: #000;
+        }
+        .follow ul li:nth-child(4) a {
+            color: #E62117;
+        }
+        .follow ul li:nth-child(1) a:hover,
+        .follow ul li:nth-child(2) a:hover,
+        .follow ul li:nth-child(4) a:hover {
+            color: #fff;
+        }
+        .gradient-bg {
+            background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3) !important;
+        }
+        footer{
+            text-align: center;
+            background-color: #BB661B;
+            a{
+                color: darkgreen;
+                font-weight: 600;
+            }
+            a:hover{
+                color: #759144;
+            }
+        }
+        /* ------------------footer end--------- */
+        /* -----------line above the footer start--------- */
+        .line{
+            width: 100%;
+            height: 20px;
+            background-color: #BB661B;
+            margin-bottom: -1px;
+            margin-top: 15px;
+        }
+        /* -----------line above the footer end--------- */
     </style>
 </head>
 <body>
+    <!-- header start -->
     <header>
+        <!-- nav start -->
         <nav>
+            <!-- logo -->
             <a href="/index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
         <ul>
             <li><a href="/index.html" class="active">home <span></span></a></li> 
@@ -429,10 +537,15 @@
             <li><a href="/contact us/contact.html">contact <span></span></a></li>
         </ul>
         </nav>
+        <!-- nav end -->
+        <!-- background image  -->
         <img src="images/LL.png"  class="bg">
         <div class="overlay"></div>
     </header>
+    <!-- header end -->
+    <!-- main start -->
     <main>
+        <!-- info abt the animal -->
         <section class="title1">
             <h1>Leopard</h1>
             <h2>Arabian Leopard</h2>
@@ -451,11 +564,13 @@
             </div>
             <hr>
         </section>
+        <!-- parallax image -->
         <section>
             <div class="picture">
                 <div class="inside"></div>
             </div>
         </section>
+        <!-- abt section for the animal -->
         <section class="about">
             <div class="abt-info">
                 <div class="abt-left">
@@ -484,6 +599,7 @@
                 </div>
             </div>
         </section>
+        <!-- gallery -->
         <section>
             <div class="show">
                 <h2>GALLERY</h2>
@@ -496,6 +612,7 @@
                 </div>
             </div>
         </section>
+        <!-- more animals to explore  -->
         <section>
             <div class="animal_st">
                 <h2>DISCOVER WILDLIFE</h2>
@@ -518,6 +635,36 @@
               </div>
         </section>
     </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <hr class="line">
+    <div class="footer">
+        <div class="pogo">
+            <img src="images/logo.png" alt="Self Defense Club Logo">
+        </div>
+        <div class="contactt">
+            <h2>Quick Map</h2>
+            <!-- quick map -->
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5257.52681829517!2d55.73319558028216!3d24.173743903985077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab0c11e939f2b%3A0x93fd29c816885330!2sAl%20Ain%20Zoo!5e0!3m2!1sen!2sae!4v1716997634140!5m2!1sen!2sae" width="250" height="200"  style="border:0; border-radius: 30%; box-shadow: 10px 10px 10px #000;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="follow">
+            <h2>Follow Us</h2>
+            <ul>
+                <!-- social links -->
+                <li><a href="https://www.facebook.com/AlAinZooUAE/" target="_blank"><i class="fa-brands fa-facebook-f effect"></i></a></li>
+                <li><a href="https://www.instagram.com/alainzoouae/" target="_blank"><i class="fa-brands fa-instagram effect"></i></a></li>
+                <li><a href="https://x.com/alainzoouae?lang=en" target="_blank"><i class="fa-brands fa-x-twitter effect"></i></a></li>
+                <li><a href="https://www.youtube.com/@AlAinZooUAE" target="_blank"><i class="fa-brands fa-youtube effect"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <!-- credit, original website -->
+        Made by &copy; Ayisha Mannan &nbsp;&nbsp; <a href="https://alainzoo.ae/" target="_blank">original</a>
+    </footer>
+
+    <!-- javascript -->
     <script>
         // hover sound effect 
         var soundLeo = document.getElementById("sound-leo");
@@ -542,6 +689,37 @@
             sound.pause();
             sound.currentTime = 0; 
         }
+
+         // footer color changing background
+    document.querySelector('.follow ul li:nth-child(1) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').style.backgroundColor = '#316FF6';
+    });
+    
+    document.querySelector('.follow ul li:nth-child(1) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
+    
+    document.querySelector('.follow ul li:nth-child(2) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').classList.add('gradient-bg');
+    });
+    document.querySelector('.follow ul li:nth-child(2) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').classList.remove('gradient-bg');
+        document.querySelector('.footer').style.backgroundColor = '#b0865f'; 
+    });
+    
+    document.querySelector('.follow ul li:nth-child(3) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').style.backgroundColor = '#fff';
+    });
+    document.querySelector('.follow ul li:nth-child(3) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
+    
+    document.querySelector('.follow ul li:nth-child(4) a').addEventListener('mouseover', function() {
+        document.querySelector('.footer').style.backgroundColor = '#E62117';
+    });
+    document.querySelector('.follow ul li:nth-child(4) a').addEventListener('mouseout', function() {
+        document.querySelector('.footer').style.backgroundColor = '#b0865f';
+    });
     </script>
 </body>
 </html>
