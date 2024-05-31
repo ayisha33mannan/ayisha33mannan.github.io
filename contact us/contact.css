@@ -3,20 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* fonts */
 h1, h2, h3 {
     font-family: 'Bubblegum Sans', cursive; 
 }
 p, span, a {
     font-family: 'Open Sans', sans-serif; 
 }
+/* css */
 html{
     overflow-x: hidden;
 }
 body{
     background: url(video/bg.jpg) ;   
      overflow-x: hidden;
-
+     font-family: 'Lato', sans-serif;
 }
+/* header stART */
 /* nav bar start*/
 nav{
     width: 100%;
@@ -72,6 +75,7 @@ nav .logo{
     cursor: pointer;
 }
 /* nav bar ending */
+/* header end */
 
 /* contact us page ----start----- */
 .contain_contact{
@@ -165,6 +169,7 @@ nav .logo{
 .image-cont{
     margin-left: 100px;
 }
+/* image when on hover */
 .image{
     position: relative;
     margin-top: -200px;
@@ -196,7 +201,7 @@ nav .logo{
         border-radius: 20px;
     }
 }
-
+/* the info when no hover */
 .lala {
     position: absolute;
     top: 50%;
@@ -220,7 +225,6 @@ nav .logo{
             font-size: 20px;
             font-weight: 600;
             padding: 0px 51px;
-            /* color: #000; */
         }
     }
 }
@@ -248,4 +252,97 @@ nav .logo{
 @media (max-width: 768px){
     .left{
         margin-left: -10px;
-    }}
+    }
+}
+/* -------------------main end ------------*/
+/* ------------------footer start--------- */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b0865f;
+    color: #fff;
+    padding: 20px;
+    height: 250px;
+}
+.footer .pogo img {
+    height: 220px;
+}
+.footer .contactt,
+.footer .follow {
+    text-align: center;
+}
+.footer .follow h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+.footer .contactt p,
+.footer .follow p {
+    font-weight: 300;
+    margin: 5px 0;
+}
+.footer .pogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .contactt h2 {
+    font-weight: 700;
+    color: #000;
+}
+.footer .follow h2 {
+    border-bottom: 3px solid #3B5623;
+    display: inline-block;
+}
+.follow ul {
+    display: flex;
+    align-items: center;
+
+    margin-left: 4%;
+}
+.follow ul li {
+    list-style: none;
+    a{
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+.follow ul li:nth-child(1) a {
+    color: #316FF6;    
+
+}
+.follow ul li:nth-child(2) a {
+    background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.follow ul li:nth-child(3) a {
+    color: #000;
+}
+.follow ul li:nth-child(4) a {
+    color: #E62117;
+}
+.follow ul li:nth-child(1) a:hover,
+.follow ul li:nth-child(2) a:hover,
+.follow ul li:nth-child(4) a:hover {
+    color: #fff;
+}
+
+
+.gradient-bg {
+    background: linear-gradient(60deg, #ffee00, #f5842e, #d4250e, #4e82f3) !important;
+}
+footer{
+    text-align: center;
+    background-color: #BB661B;
+    a{
+        color: darkgreen;
+        font-weight: 600;
+    }
+    a:hover{
+        color: #759144;
+    }
+}
+/* ------------------footer end--------- */
