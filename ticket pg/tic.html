@@ -226,7 +226,7 @@
         var input = document.getElementById(inputId);
         var value = parseInt(input.value, 10);
         value = isNaN(value) ? 0 : value;
-        if (values > 0) {
+        if (value > 0) { 
             value--;
             input.value = value;
         }
